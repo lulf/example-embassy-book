@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.22">
+<meta name="description" content="Embassy Book">
+<title>Embassy Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Embassy Book</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_what_is_async">What is async?</a></li>
+<li><a href="#_what_is_embassy">What is Embassy?</a></li>
+<li><a href="#_what_is_dma">What is DMA?</a></li>
+<li><a href="#_examples">Examples</a></li>
+<li><a href="#_embassy_in_the_wild">Embassy in the wild!</a></li>
+<li><a href="#_resources">Resources</a></li>
+</ul>
+</li>
+<li><a href="#_for_beginners">For beginners</a>
+<ul class="sectlevel2">
+<li><a href="#_getting_started">Getting started</a></li>
+<li><a href="#_a_basic_embassy_application">A basic Embassy application</a></li>
+<li><a href="#_project_structure">Project Structure</a></li>
+<li><a href="#_starting_a_new_project">Starting a new project</a></li>
+<li><a href="#_best_practices">Best Practices</a></li>
+<li><a href="#_from_bare_metal_to_async_rust">From bare metal to async Rust</a></li>
+</ul>
+</li>
+<li><a href="#_system_description">System description</a>
+<ul class="sectlevel2">
+<li><a href="#_embassy_executor">Embassy executor</a></li>
+<li><a href="#_bootloader">Bootloader</a></li>
+<li><a href="#_time_keeping">Time-keeping</a></li>
+<li><a href="#_hardware_abstraction_layer_hal">Hardware Abstraction Layer (HAL)</a></li>
+<li><a href="#_embassy_nrf_hal">Embassy nRF HAL</a></li>
+<li><a href="#_embassy_stm32_hal">Embassy STM32 HAL</a></li>
+<li><a href="#_sharing_peripherals_between_tasks">Sharing peripherals between tasks</a></li>
+<li><a href="#_developer_documentation">Developer Documentation</a></li>
+<li><a href="#_developer_documentation_stm32">Developer Documentation: STM32</a></li>
+</ul>
+</li>
+<li><a href="#_frequently_asked_questions">Frequently Asked Questions</a>
+<ul class="sectlevel2">
+<li><a href="#_how_to_deploy_to_rp2040_without_a_debugging_probe">How to deploy to RP2040 without a debugging probe.</a></li>
+<li><a href="#_missing_main_macro">Missing main macro</a></li>
+<li><a href="#_why_is_my_binary_so_big">Why is my binary so big?</a></li>
+<li><a href="#_embassy_time_throws_linker_errors"><code>embassy-time</code> throws linker errors</a></li>
+<li><a href="#_error_only_one_package_in_the_dependency_graph_may_specify_the_same_links_value">Error: <code>Only one package in the dependency graph may specify the same links value.</code></a></li>
+<li><a href="#_how_can_i_optimize_the_speed_of_my_embassy_stm32_program">How can I optimize the speed of my embassy-stm32 program?</a></li>
+<li><a href="#_how_do_i_set_up_the_task_arenas_on_stable">How do I set up the task arenas on stable?</a></li>
+<li><a href="#_can_i_use_manual_isrs_alongside_embassy">Can I use manual ISRs alongside Embassy?</a></li>
+<li><a href="#_how_can_i_measure_resource_usage_cpu_ram_etc">How can I measure resource usage (CPU, RAM, etc.)?</a></li>
+<li><a href="#_the_memory_definition_for_my_stm_chip_seems_wrong_how_do_i_define_a_memory_x_file">The memory definition for my STM chip seems wrong, how do I define a <code>memory.x</code> file?</a></li>
+<li><a href="#_the_usb_examples_are_not_working_on_my_board_is_there_anything_else_i_need_to_configure">The USB examples are not working on my board, is there anything else I need to configure?</a></li>
+<li><a href="#_known_issues_details_andor_mitigations">Known issues (details and/or mitigations)</a></li>
+<li><a href="#_how_do_i_switch_to_the_main_branch">How do I switch to the <code>main</code> branch?</a></li>
+<li><a href="#_how_do_i_add_support_for_a_new_microcontroller_to_embassy">How do I add support for a new microcontroller to embassy?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Welcome to the Embassy Book. The Embassy Book is for everyone who wants to use Embassy and understand how Embassy works.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Embassy is a project to make async/await a first-class option for embedded development.</p>
+</div>
+<div class="sect2">
+<h3 id="_what_is_async"><a class="anchor" href="#_what_is_async"></a>What is async?</h3>
+<div class="paragraph">
+<p>When handling I/O, software must call functions that block program execution until the I/O operation completes. When running inside of an OS such as Linux, such functions generally transfer control to the kernel so that another task (known as a “thread”) can be executed if available, or the CPU can be put to sleep until another task is ready.</p>
+</div>
+<div class="paragraph">
+<p>Because an OS cannot presume that threads will behave cooperatively, threads are relatively resource-intensive, and may be forcibly interrupted they do not transfer control back to the kernel within an allotted time. If tasks could be presumed to behave cooperatively, or at least not maliciously, it would be possible to create tasks that appear to be almost free when compared to a traditional OS thread.</p>
+</div>
+<div class="paragraph">
+<p>In other programming languages, these lightweight tasks are known as “coroutines” or ”goroutines”. In Rust, they are implemented with async. Async-await works by transforming each async function into an object called a future. When a future blocks on I/O the future yields, and the scheduler, called an executor, can select a different future to execute.</p>
+</div>
+<div class="paragraph">
+<p>Compared to alternatives such as an RTOS, async can yield better performance and lower power consumption because the executor doesn&#8217;t have to guess when a future is ready to execute. However, program size may be higher than other alternatives, which may be a problem for certain space-constrained devices with very low memory. On the devices Embassy supports, such as stm32 and nrf, memory is generally large enough to accommodate the modestly-increased program size.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_embassy"><a class="anchor" href="#_what_is_embassy"></a>What is Embassy?</h3>
+<div class="paragraph">
+<p>The Embassy project consists of several crates that you can use together or independently:</p>
+</div>
+<div class="sect3">
+<h4 id="_executor"><a class="anchor" href="#_executor"></a>Executor</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.embassy.dev/embassy-executor/">embassy-executor</a> is an async/await executor that generally executes a fixed number of tasks, allocated at startup, though more can be added later.  The executor may also provide a system timer that you can use for both async and blocking delays. For less than one microsecond, blocking delays should be used because the cost of context-switching is too high and the executor will be unable to provide accurate timing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hardware_abstraction_layers"><a class="anchor" href="#_hardware_abstraction_layers"></a>Hardware Abstraction Layers</h4>
+<div class="paragraph">
+<p>HALs implement safe Rust API which let you use peripherals such as USART, UART, I2C, SPI, CAN, and USB without having to directly manipulate registers.</p>
+</div>
+<div class="paragraph">
+<p>Embassy provides implementations of both async and blocking APIs where it makes sense. DMA (Direct Memory Access) is an example where async is a good fit, whereas GPIO states are a better fit for a blocking API.</p>
+</div>
+<div class="paragraph">
+<p>The Embassy project maintains HALs for select hardware, but you can still use HALs from other projects with Embassy.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.embassy.dev/embassy-stm32/">embassy-stm32</a>, for all STM32 microcontroller families.</p>
+</li>
+<li>
+<p><a href="https://docs.embassy.dev/embassy-nrf/">embassy-nrf</a>, for the Nordic Semiconductor nRF52, nRF53, nRF91 series.</p>
+</li>
+<li>
+<p><a href="https://docs.embassy.dev/embassy-rp/">embassy-rp</a>, for the Raspberry Pi RP2040 microcontroller.</p>
+</li>
+<li>
+<p><a href="https://github.com/esp-rs">esp-rs</a>, for the Espressif Systems ESP32 series of chips.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A common question is if one can use the Embassy HALs standalone. Yes, it is possible! There are no dependency on the executor within the HALs. You can even use them without async,
+as they implement both the <a href="https://github.com/rust-embedded/embedded-hal">Embedded HAL</a> blocking and async traits.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_networking"><a class="anchor" href="#_networking"></a>Networking</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.embassy.dev/embassy-net/">embassy-net</a> network stack implements extensive networking functionality, including Ethernet, IP, TCP, UDP, ICMP and DHCP. Async drastically simplifies managing timeouts and serving multiple connections concurrently. Several drivers for WiFi and Ethernet chips can be found.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bluetooth"><a class="anchor" href="#_bluetooth"></a>Bluetooth</h4>
+<div class="paragraph">
+<p>The <a href="https://github.com/embassy-rs/nrf-softdevice">nrf-softdevice</a> crate provides Bluetooth Low Energy 4.x and 5.x support for nRF52 microcontrollers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lora"><a class="anchor" href="#_lora"></a>LoRa</h4>
+<div class="paragraph">
+<p><a href="https://github.com/lora-rs/lora-rs">lora-rs</a> supports LoRa networking on a wide range of LoRa radios, fully integrated with a Rust LoRaWAN implementation. It provides four crates — lora-phy, lora-modulation, lorawan-encoding, and lorawan-device — and basic examples for various development boards. It has support for STM32WL wireless microcontrollers or Semtech SX127x transceivers, among others.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_usb"><a class="anchor" href="#_usb"></a>USB</h4>
+<div class="paragraph">
+<p><a href="https://docs.embassy.dev/embassy-usb/">embassy-usb</a> implements a device-side USB stack. Implementations for common classes such as USB serial (CDC ACM) and USB HID are available, and a rich builder API allows building your own.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bootloader_and_dfu"><a class="anchor" href="#_bootloader_and_dfu"></a>Bootloader and DFU</h4>
+<div class="paragraph">
+<p><a href="https://github.com/embassy-rs/embassy/tree/master/embassy-boot">embassy-boot</a> is a lightweight bootloader supporting firmware application upgrades in a power-fail-safe way, with trial boots and rollbacks.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_is_dma"><a class="anchor" href="#_what_is_dma"></a>What is DMA?</h3>
+<div class="paragraph">
+<p>For most I/O in embedded devices, the peripheral doesn&#8217;t directly support the transmission of multiple bits at once, with CAN being a notable exception. Instead, the MCU must write each byte, one at a time, and then wait until the peripheral is ready to send the next. For high I/O rates, this can pose a problem if the MCU must devote an increasing portion of its time handling each byte. The solution to this problem is to use the Direct Memory Access controller.</p>
+</div>
+<div class="paragraph">
+<p>The Direct Memory Access controller (DMA) is a controller that is present in MCUs that Embassy supports, including stm32 and nrf. The DMA allows the MCU to set up a transfer, either send or receive, and then wait for the transfer to complete. With DMA, once started, no MCU intervention is required until the transfer is complete, meaning that the MCU can perform other computation, or set up other I/O while the transfer is in progress. For high I/O rates, DMA can cut the time that the MCU spends handling I/O by over half. However, because DMA is more complex to set-up, it is less widely used in the embedded community. Embassy aims to change that by making DMA the first choice rather than the last. Using Embassy, there&#8217;s no additional tuning required once I/O rates increase because your application is already set-up to handle them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>Embassy provides examples for all HALs supported. You can find them in the <code>examples/</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>Main loop example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use embassy_executor::Spawner;
+use embassy_time::Timer;
+use log::*;
+
+#[embassy_executor::task]
+async fn run() {
+    loop {
+        info!("tick");
+        Timer::after_secs(1).await;
+    }
+}
+
+#[embassy_executor::main]
+async fn main(spawner: Spawner) {
+    env_logger::builder()
+        .filter_level(log::LevelFilter::Debug)
+        .format_timestamp_nanos()
+        .init();
+
+    spawner.spawn(run()).unwrap();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_embassy_in_the_wild"><a class="anchor" href="#_embassy_in_the_wild"></a>Embassy in the wild!</h3>
+<div class="paragraph">
+<p>Here are known examples of real-world projects which make use of Embassy. Feel free to <a href="https://github.com/embassy-rs/embassy/blob/main/docs/modules/ROOT/pages/embassy_in_the_wild.adoc">add more</a>!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/haobogu/rmk/">RMK: A feature-rich Rust keyboard firmware</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>RMK has built-in layer support, wireless(BLE) support, real-time key editing support using vial, and more!</p>
+</li>
+<li>
+<p>Targets STM32, RP2040, nRF52 and ESP32 MCUs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/cbruiz/printhor/">Printhor: The highly reliable but not necessarily functional 3D printer firmware</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Targets some STM32 MCUs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/card-io-ecg/card-io-fw">Card/IO firmware</a> - firmware for an open source ECG device</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Targets the ESP32-S3 or ESP32-C6 MCU</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <a href="https://github.com/lora-rs/lora-rs">lora-rs</a> project includes <a href="https://github.com/lora-rs/lora-rs/tree/main/examples/stm32l0/src/bin">various standalone examples</a> for NRF52840, RP2040, STM32L0 and STM32WL</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/matoushybl/air-force-one">Air force one: A simple air quality monitoring system</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Targets nRF52 and uses nrf-softdevice</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/schmettow/ylab-edge-go">YLab Edge Go</a> and <a href="https://github.com/schmettow/ylab-edge-pro">YLab Edge Pro</a> projects develop
+firmware (RP2040, STM32) for capturing physiological data in behavioural science research. Included so far are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>biopotentials (analog ports)</p>
+</li>
+<li>
+<p>motion capture (6-axis accelerometers)</p>
+</li>
+<li>
+<p>air quality (CO2, Temp, Humidity)</p>
+</li>
+<li>
+<p>comes with an app for capturing and visualizing data [<a href="https://github.com/schmettow/ystudio-zero">Ystudio</a>]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h3>
+<div class="paragraph">
+<p>For more reading material on async Rust and Embassy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown">Comparsion of FreeRTOS and Embassy</a></p>
+</li>
+<li>
+<p><a href="https://dev.to/apollolabsbin/series/20707">Tutorials</a></p>
+</li>
+<li>
+<p><a href="https://blog.drogue.io/firmware-updates-part-1/">Firmware Updates with Embassy</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_for_beginners"><a class="anchor" href="#_for_beginners"></a>For beginners</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The articles in this section are primarily aimed at users new to Embassy,
+showing how to get started, how to structure your project and other best practices.</p>
+</div>
+<div class="sect2">
+<h3 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting started</h3>
+<div class="paragraph">
+<p>So you want to try Embassy, great! To get started, there are a few tools you need to install:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rustup.rs/">rustup</a> - the Rust toolchain is needed to compile Rust code.</p>
+</li>
+<li>
+<p><a href="https://probe.rs/">probe-rs</a> - to flash the firmware on your device. If you already have other tools like <code>OpenOCD</code> setup, you can use that as well.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t have any supported board, don&#8217;t worry: you can also run embassy on your PC using the <code>std</code> examples.</p>
+</div>
+<div class="sect3">
+<h4 id="_getting_a_board_with_examples"><a class="anchor" href="#_getting_a_board_with_examples"></a>Getting a board with examples</h4>
+<div class="paragraph">
+<p>Embassy supports many microcontroller families, but the quickest way to get started is by using a board which Embassy has existing example code for.</p>
+</div>
+<div class="paragraph">
+<p>This list is non-exhaustive. If your board isn’t included here, check the <a href="https://github.com/embassy-rs/embassy/tree/main/examples">examples folder</a> to see if example code has been written for it.</p>
+</div>
+<div class="sect4">
+<h5 id="_nrf_kits"><a class="anchor" href="#_nrf_kits"></a>nRF kits</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk">nRF52 DK</a></p>
+</li>
+<li>
+<p><a href="https://www.nordicsemi.com/Products/Development-hardware/nRF9160-DK">nRF9160 DK</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_stm32_kits"><a class="anchor" href="#_stm32_kits"></a>STM32 kits</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/nucleo-h743zi.html">STM32 Nucleo-144 development board with STM32H743ZI MCU</a></p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/nucleo-f429zi.html">STM32 Nucleo-144 development board with STM32F429ZI MCU</a></p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/b-l4s5i-iot01a.html">STM32L4+ Discovery kit IoT node, low-power wireless, BLE, NFC, WiFi</a></p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html">STM32L0 Discovery kit LoRa, Sigfox, low-power wireless</a></p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/nucleo-wl55jc.html">STM32 Nucleo-64 development board with STM32WL55JCI MCU</a></p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/evaluation-tools/b-u585i-iot02a.html">Discovery kit for IoT node with STM32U5 series</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rp2040_kits"><a class="anchor" href="#_rp2040_kits"></a>RP2040 kits</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">Raspberry Pi Pico</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_esp32"><a class="anchor" href="#_esp32"></a>ESP32</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/esp-rs/esp-rust-board">ESP32C3</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_running_an_example"><a class="anchor" href="#_running_an_example"></a>Running an example</h4>
+<div class="paragraph">
+<p>First you need to clone the <a href="https://github.com/embassy-rs/embassy">github repository</a>;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git clone https://github.com/embassy-rs/embassy.git
+cd embassy</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you have a copy of the repository, find examples folder for your board and, and build an example program. <code>blinky</code> is a good choice as all it does is blink an LED – the embedded world’s equivalent of “Hello World”.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd examples/nrf52840
+cargo build --bin blinky --release</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you’ve confirmed you can build the example, connect your computer to your board with a debug probe and run it on hardware:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cargo run --bin blinky --release</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If everything worked correctly, you should see a blinking LED on your board, and debug output similar to this on your computer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>    Finished dev [unoptimized + debuginfo] target(s) in 1m 56s
+     Running `probe-run --chip STM32F407VGTx target/thumbv7em-none-eabi/debug/blinky`
+(HOST) INFO  flashing program (71.36 KiB)
+(HOST) INFO  success!
+────────────────────────────────────────────────────────────────────────────────
+0 INFO  Hello World!
+└─ blinky::__embassy_main::task::{generator#0} @ src/bin/blinky.rs:18
+1 INFO  high
+└─ blinky::__embassy_main::task::{generator#0} @ src/bin/blinky.rs:23
+2 INFO  low
+└─ blinky::__embassy_main::task::{generator#0} @ src/bin/blinky.rs:27
+3 INFO  high
+└─ blinky::__embassy_main::task::{generator#0} @ src/bin/blinky.rs:23
+4 INFO  low
+└─ blinky::__embassy_main::task::{generator#0} @ src/bin/blinky.rs:27</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+How does the <code>cargo run</code> command know how to connect to our board and program it? In each <code>examples</code> folder, there’s a <code>.cargo/config.toml</code> file which tells cargo to use <a href="https://probe.rs/">probe-rs</a> as the runner for ARM binaries in that folder. probe-rs handles communication with the debug probe and MCU. In order for this to work, probe-rs needs to know which chip it’s programming, so you’ll have to edit this file if you want to run examples on other chips.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_it_didnt_work"><a class="anchor" href="#_it_didnt_work"></a>It didn’t work!</h5>
+<div class="paragraph">
+<p>If you hare having issues when running <code>cargo run --release</code>, please check the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You are specifying the correct <code>--chip</code> on the command line, OR</p>
+</li>
+<li>
+<p>You have set <code>.cargo/config.toml</code>’s run line to the correct chip, AND</p>
+</li>
+<li>
+<p>You have changed <code>examples/Cargo.toml</code>’s HAL (e.g. embassy-stm32) dependency&#8217;s feature to use the correct chip (replace the existing stm32xxxx feature)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At this point the project should run. If you do not see a blinky LED for blinky, for example, be sure to check the code is toggling your board&#8217;s LED pin.</p>
+</div>
+<div class="paragraph">
+<p>If you are trying to run an example with <code>cargo run --release</code> and you see the following output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>0.000000 INFO Hello World!
+└─ &lt;invalid location: defmt frame-index: 14&gt;
+0.000000 DEBUG rcc: Clocks { sys: Hertz(80000000), apb1: Hertz(80000000), apb1_tim: Hertz(80000000), apb2: Hertz(80000000), apb2_tim: Hertz(80000000), ahb1: Hertz(80000000), ahb2: Hertz(80000000), ahb3: Hertz(80000000) }
+└─ &lt;invalid location: defmt frame-index: 124&gt;
+0.000061 TRACE allocating type=Interrupt mps=8 interval_ms=255, dir=In
+└─ &lt;invalid location: defmt frame-index: 68&gt;
+0.000091 TRACE   index=1
+└─ &lt;invalid location: defmt frame-index: 72&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get rid of the frame-index error add the following to your <code>Cargo.toml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[profile.release]
+debug = 2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you’re getting an extremely long error message containing something like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>error[E0463]: can't find crate for `std`
+  |
+  = note: the `thumbv6m-none-eabi` target may not support the standard library
+  = note: `std` is required by `stable_deref_trait` because it does not declare `#![no_std]`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure that you didn’t accidentally run <code>cargo add probe-rs</code> (which adds it as a dependency) instead of <a href="https://probe.rs/docs/getting-started/installation/">correctly installing probe-rs</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you’re using a raspberry pi pico-w, make sure you’re running <code>cargo run --bin wifi_blinky --release</code> rather than the regular blinky. The pico-w’s on-board LED is connected to the WiFi chip, which needs to be initialized before the LED can be blinked.</p>
+</div>
+<div class="paragraph">
+<p>If you’re using an rp2040 debug probe (e.g. the pico probe) and are having issues after running <code>probe-rs info</code>, unplug and reconnect the probe, letting it power cycle. Running <code>probe-rs info</code> is <a href="https://github.com/probe-rs/probe-rs/issues/1849">known to put the pico probe into an unusable state</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you’re still having problems, check the <a href="https://embassy.dev/book/dev/faq.html">FAQ</a>, or ask for help in the <a href="https://matrix.to/#/#embassy-rs:matrix.org">Embassy Chat Room</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_whats_next"><a class="anchor" href="#_whats_next"></a>What&#8217;s next?</h4>
+<div class="paragraph">
+<p>Congratulations, you have your first Embassy application running! Here are some suggestions for where to go from here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read more about the <a href="runtime.html">executor</a>.</p>
+</li>
+<li>
+<p>Read more about the <a href="hal.html">HAL</a>.</p>
+</li>
+<li>
+<p>Start <a href="basic_application.html">writing your application</a>.</p>
+</li>
+<li>
+<p>Learn how to <a href="new_project.html">start a new embassy project by adapting an example</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_basic_embassy_application"><a class="anchor" href="#_a_basic_embassy_application"></a>A basic Embassy application</h3>
+<div class="paragraph">
+<p>So you&#8217;ve got one of the <a href="examples.html">examples</a> running, but what now? Let&#8217;s go through a simple Embassy application for the nRF52 DK to understand it better.</p>
+</div>
+<div class="sect3">
+<h4 id="_main"><a class="anchor" href="#_main"></a>Main</h4>
+<div class="paragraph">
+<p>The full example can be found <a href="https://github.com/embassy-rs/embassy/tree/master/docs/modules/ROOT/examples/basic">here</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you’re using VS Code and rust-analyzer to view and edit the examples, you may need to make some changes to <code>.vscode/settings.json</code> to tell it which project we’re working on. Follow the instructions commented in that file to get rust-analyzer working correctly.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_bare_metal"><a class="anchor" href="#_bare_metal"></a>Bare metal</h5>
+<div class="paragraph">
+<p>The first thing you’ll notice are two attributes at the top of the file. These tells the compiler that program has no access to std, and that there is no main function (because it is not run by an OS).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#![no_std]
+#![no_main]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_dealing_with_errors"><a class="anchor" href="#_dealing_with_errors"></a>Dealing with errors</h5>
+<div class="paragraph">
+<p>Then, what follows are some declarations on how to deal with panics and faults. During development, a good practice is to rely on <code>defmt-rtt</code> and <code>panic-probe</code> to print diagnostics to the terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use {defmt_rtt as _, panic_probe as _}; // global logger</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_task_declaration"><a class="anchor" href="#_task_declaration"></a>Task declaration</h5>
+<div class="paragraph">
+<p>After a bit of import declaration, the tasks run by the application should be declared:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[embassy_executor::task]
+async fn blinker(mut led: Output&lt;'static&gt;, interval: Duration) {
+    loop {
+        led.set_high();
+        Timer::after(interval).await;
+        led.set_low();
+        Timer::after(interval).await;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An embassy task must be declared <code>async</code>, and may NOT take generic arguments. In this case, we are handed the LED that should be blinked and the interval of the blinking.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Notice that there is no busy waiting going on in this task. It is using the Embassy timer to yield execution, allowing the microcontroller to sleep in between the blinking.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_main_2"><a class="anchor" href="#_main_2"></a>Main</h5>
+<div class="paragraph">
+<p>The main entry point of an Embassy application is defined using the <code>#[embassy_executor::main]</code> macro. The entry point is passed a <code>Spawner</code>, which it can use to spawn other tasks.</p>
+</div>
+<div class="paragraph">
+<p>We then initialize the HAL with a default config, which gives us a <code>Peripherals</code> struct we can use to access the MCU’s various peripherals. In this case, we want to configure one of the pins as a GPIO output driving the LED:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[embassy_executor::main]
+async fn main(spawner: Spawner) {
+    let p = embassy_nrf::init(Default::default());
+
+    let led = Output::new(p.P0_13, Level::Low, OutputDrive::Standard);
+    unwrap!(spawner.spawn(blinker(led, Duration::from_millis(300))));
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What happens when the <code>blinker</code> task has been spawned and main returns? Well, the main entry point is actually just like any other task, except that you can only have one and it takes some specific type arguments. The magic lies within the <code>#[embassy_executor::main]</code> macro. The macro does the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Creates an Embassy Executor</p>
+</li>
+<li>
+<p>Defines a main task for the entry point</p>
+</li>
+<li>
+<p>Runs the executor spawning the main task</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>There is also a way to run the executor without using the macro, in which case you have to create the <code>Executor</code> instance yourself.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_cargo_toml"><a class="anchor" href="#_the_cargo_toml"></a>The Cargo.toml</h4>
+<div class="paragraph">
+<p>The project definition needs to contain the embassy dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">embassy-executor = { version = "0.5.0", path = "../../../../../embassy-executor", features = ["defmt", "integrated-timers", "arch-cortex-m", "executor-thread"] }
+embassy-time = { version = "0.3.0", path = "../../../../../embassy-time", features = ["defmt"] }
+embassy-nrf = { version = "0.1.0", path = "../../../../../embassy-nrf", features = ["defmt", "nrf52840", "time-driver-rtc1", "gpiote"] }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on your microcontroller, you may need to replace <code>embassy-nrf</code> with something else (<code>embassy-stm32</code> for STM32. Remember to update feature flags as well).</p>
+</div>
+<div class="paragraph">
+<p>In this particular case, the nrf52840 chip is selected, and the RTC1 peripheral is used as the time driver.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_project_structure"><a class="anchor" href="#_project_structure"></a>Project Structure</h3>
+<div class="paragraph">
+<p>There are many ways to configure embassy and its components for your exact application. The <a href="https://github.com/embassy-rs/embassy/tree/main/examples">examples</a> directory for each chipset demonstrates how your project structure should look. Let&#8217;s break it down:</p>
+</div>
+<div class="paragraph">
+<p>The toplevel file structure of your project should look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-plain" data-lang="plain">{} = Maybe
+
+my-project
+|- .cargo
+|  |- config.toml
+|- src
+|  |- main.rs
+|- build.rs
+|- Cargo.toml
+|- {memory.x}
+|- rust-toolchain.toml</code></pre>
+</div>
+</div>
+<h4 id="_cargoconfig_toml" class="discrete">.cargo/config.toml</h4>
+<div class="paragraph">
+<p>This directory/file describes what platform you&#8217;re on, and configures <a href="https://github.com/probe-rs/probe-rs">probe-rs</a> to deploy to your device.</p>
+</div>
+<div class="paragraph">
+<p>Here is a minimal example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[target.thumbv6m-none-eabi] # &lt;-change for your platform
+runner = 'probe-rs run --chip STM32F031K6Tx' # &lt;- change for your chip
+
+[build]
+target = "thumbv6m-none-eabi" # &lt;-change for your platform
+
+[env]
+DEFMT_LOG = "trace" # &lt;- can change to info, warn, or error</code></pre>
+</div>
+</div>
+<h4 id="_build_rs" class="discrete">build.rs</h4>
+<div class="paragraph">
+<p>This is the build script for your project. It links defmt (what is <a href="https://defmt.ferrous-systems.com">defmt</a>?) and the <code>memory.x</code> file if needed. This file is pretty specific for each chipset, just copy and paste from the corresponding <a href="https://github.com/embassy-rs/embassy/tree/main/examples">example</a>.</p>
+</div>
+<h4 id="_cargo_toml" class="discrete">Cargo.toml</h4>
+<div class="paragraph">
+<p>This is your manifest file, where you can configure all of the embassy components to use the features you need.</p>
+</div>
+<h5 id="_features" class="discrete">Features</h5>
+<h6 id="_time" class="discrete">Time</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>tick-hz-x: Configures the tick rate of <code>embassy-time</code>. Higher tick rate means higher precision, and higher CPU wakes.</p>
+</li>
+<li>
+<p>defmt-timestamp-uptime: defmt log entries will display the uptime in seconds.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;more to come</p>
+</div>
+<h4 id="_memory_x" class="discrete">memory.x</h4>
+<div class="paragraph">
+<p>This file outlines the flash/ram usage of your program. It is especially useful when using <a href="https://github.com/embassy-rs/nrf-softdevice">nrf-softdevice</a> on an nRF5x.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example for using S140 with an nRF52840:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-x" data-lang="x">MEMORY
+{
+  /* NOTE 1 K = 1 KiBi = 1024 bytes */
+  /* These values correspond to the NRF52840 with Softdevices S140 7.0.1 */
+  FLASH : ORIGIN = 0x00027000, LENGTH = 868K
+  RAM : ORIGIN = 0x20020000, LENGTH = 128K
+}</code></pre>
+</div>
+</div>
+<h4 id="_rust_toolchain_toml" class="discrete">rust-toolchain.toml</h4>
+<div class="paragraph">
+<p>This file configures the rust version and configuration to use.</p>
+</div>
+<div class="paragraph">
+<p>A minimal example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[toolchain]
+channel = "nightly-2023-08-19" # &lt;- as of writing, this is the exact rust version embassy uses
+components = [ "rust-src", "rustfmt" ] # &lt;- optionally add "llvm-tools-preview" for some extra features like "cargo size"
+targets = [
+    "thumbv6m-none-eabi" # &lt;-change for your platform
+]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_starting_a_new_project"><a class="anchor" href="#_starting_a_new_project"></a>Starting a new project</h3>
+<div class="paragraph">
+<p>Once you’ve successfully <a href="getting_started.html">run some example projects</a>, the next step is to make a standalone Embassy project.</p>
+</div>
+<div class="sect3">
+<h4 id="_tools_for_generating_embassy_projects"><a class="anchor" href="#_tools_for_generating_embassy_projects"></a>Tools for generating Embassy projects</h4>
+<div class="sect4">
+<h5 id="_cli"><a class="anchor" href="#_cli"></a>CLI</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/adinack/cargo-embassy">cargo-embassy</a> (STM32 and NRF)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cargo_generate"><a class="anchor" href="#_cargo_generate"></a>cargo-generate</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/lulf/embassy-template">embassy-template</a> (STM32, NRF, and RP)</p>
+</li>
+<li>
+<p><a href="https://github.com/bentwire/embassy-rp2040-template">embassy-rp2040-template</a> (RP)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_starting_a_project_from_scratch"><a class="anchor" href="#_starting_a_project_from_scratch"></a>Starting a project from scratch</h4>
+<div class="paragraph">
+<p>As an example, let’s create a new embassy project from scratch for a STM32G474. The same instructions are applicable for any supported chip with some minor changes.</p>
+</div>
+<div class="paragraph">
+<p>Run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cargo new stm32g474-example
+cd stm32g474-example</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to create an empty rust project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>stm32g474-example
+├── Cargo.toml
+└── src
+    └── main.rs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Looking in <a href="https://github.com/embassy-rs/embassy/tree/main/examples">the Embassy examples</a>, we can see there’s a <code>stm32g4</code> folder. Find <code>src/blinky.rs</code> and copy its contents into our <code>src/main.rs</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="_the_cargoconfig_toml"><a class="anchor" href="#_the_cargoconfig_toml"></a>The .cargo/config.toml</h5>
+<div class="paragraph">
+<p>Currently, we’d need to provide cargo with a target triple every time we run <code>cargo build</code> or <code>cargo run</code>. Let’s spare ourselves that work by copying <code>.cargo/config.toml</code> from <code>examples/stm32g4</code> into our project.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>stm32g474-example
+├── .cargo
+│   └── config.toml
+├── Cargo.toml
+└── src
+    └── main.rs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to a target triple, <code>.cargo/config.toml</code> contains a <code>runner</code> key which allows us to conveniently run our project on hardware with <code>cargo run</code> via probe-rs. In order for this to work, we need to provide the correct chip ID. We can do this by checking <code>probe-rs chip list</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ probe-rs chip list | grep -i stm32g474re
+        STM32G474RETx</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and copying <code>STM32G474RETx</code> into <code>.cargo/config.toml</code> as so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# replace STM32G071C8Rx with your chip as listed in `probe-rs chip list`
+runner = "probe-rs run --chip STM32G474RETx"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cargo_toml_2"><a class="anchor" href="#_cargo_toml_2"></a>Cargo.toml</h5>
+<div class="paragraph">
+<p>Now that cargo knows what target to compile for (and probe-rs knows what chip to run it on), we’re ready to add some dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Looking in <code>examples/stm32g4/Cargo.toml</code>, we can see that the examples require a number of embassy crates. For blinky, we’ll only need three of them: <code>embassy-stm32</code>, <code>embassy-executor</code> and <code>embassy-time</code>.</p>
+</div>
+<div class="paragraph">
+<p>At the time of writing, the latest version of embassy isn‘t available on crates.io, so we need to install it straight from the git repository. The recommended way of doing so is as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy the required <code>embassy-*</code> lines from the example <code>Cargo.toml</code></p>
+</li>
+<li>
+<p>Make any necessary changes to <code>features</code>, e.g. requiring the <code>stm32g474re</code> feature of <code>embassy-stm32</code></p>
+</li>
+<li>
+<p>Remove the <code>path = ""</code> keys in the <code>embassy-*</code> entries</p>
+</li>
+<li>
+<p>Create a <code>[patch.crates-io]</code> section, with entries for each embassy crate we need. These should all contain identical values: a link to the git repository, and a reference to the commit we’re checking out. Assuming you want the latest commit, you can find it by running <code>git ls-remote <a href="https://github.com/embassy-rs/embassy.git" class="bare">https://github.com/embassy-rs/embassy.git</a> HEAD</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+When using this method, it’s necessary that the <code>version</code> keys in <code>[dependencies]</code> match up with the versions defined in each crate’s <code>Cargo.toml</code> in the specificed <code>rev</code> under <code>[patch.crates.io]</code>. This means that when updating, you have to a pick a new revision, change everything in <code>[patch.crates.io]</code> to match it, and then correct any versions under <code>[dependencies]</code> which have changed. Hopefully this will no longer be necessary once embassy is released on crates.io!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>At the time of writing, this method produces the following results:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[dependencies]
+embassy-stm32 = {version = "0.1.0", features =  ["defmt", "time-driver-any", "stm32g474re", "memory-x", "unstable-pac", "exti"]}
+embassy-executor = { version = "0.3.3", features = ["nightly", "arch-cortex-m", "executor-thread", "defmt", "integrated-timers"] }
+embassy-time = { version = "0.2", features = ["defmt", "defmt-timestamp-uptime", "tick-hz-32_768"] }
+
+[patch.crates-io]
+embassy-time = { git = "https://github.com/embassy-rs/embassy", rev = "7703f47c1ecac029f603033b7977d9a2becef48c" }
+embassy-executor = { git = "https://github.com/embassy-rs/embassy", rev = "7703f47c1ecac029f603033b7977d9a2becef48c" }
+embassy-stm32 = { git = "https://github.com/embassy-rs/embassy", rev = "7703f47c1ecac029f603033b7977d9a2becef48c" }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are a few other dependencies we need to build the project, but fortunately they’re much simpler to install. Copy their lines from the example <code>Cargo.toml</code> to the the <code>[dependencies]</code> section in the new <code>Cargo.toml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">defmt = "0.3.5"
+defmt-rtt = "0.4.0"
+cortex-m = {version = "0.7.7", features = ["critical-section-single-core"]}
+cortex-m-rt = "0.7.3"
+panic-probe = "0.3.1"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These are the bare minimum dependencies required to run <code>blinky.rs</code>, but it’s worth taking a look at the other dependencies specified in the example <code>Cargo.toml</code>, and noting what features are required for use with embassy – for example <code>futures = { version = "0.3.17", default-features = false, features = ["async-await"] }</code>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, copy the <code>[profile.release]</code> section from the example <code>Cargo.toml</code> into ours.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[profile.release]
+debug = 2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rust_toolchain_toml_2"><a class="anchor" href="#_rust_toolchain_toml_2"></a>rust-toolchain.toml</h5>
+<div class="paragraph">
+<p>Before we can build our project, we need to add an additional file to tell cargo to use the nightly toolchain. Copy the <code>rust-toolchain.toml</code> from the embassy repo to ours, and trim the list of targets down to only the target triple relevent for our project — in this case, <code>thumbv7em-none-eabi</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>stm32g474-example
+├── .cargo
+│   └── config.toml
+├── Cargo.toml
+├── rust-toolchain.toml
+└── src
+    └── main.rs</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml"># Before upgrading check that everything is available on all tier1 targets here:
+# https://rust-lang.github.io/rustup-components-history
+[toolchain]
+channel = "nightly-2023-11-01"
+components = [ "rust-src", "rustfmt", "llvm-tools", "miri" ]
+targets = ["thumbv7em-none-eabi"]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_build_rs_2"><a class="anchor" href="#_build_rs_2"></a>build.rs</h5>
+<div class="paragraph">
+<p>In order to produce a working binary for our target, cargo requires a custom build script. Copy <code>build.rs</code> from the example to our project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>stm32g474-example
+├── build.rs
+├── .cargo
+│   └── config.toml
+├── Cargo.toml
+├── rust-toolchain.toml
+└── src
+    └── main.rs</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_building_and_running"><a class="anchor" href="#_building_and_running"></a>Building and running</h5>
+<div class="paragraph">
+<p>At this point, we‘re finally ready to build and run our project! Connect your board via a debug probe and run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cargo run --release</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>should result in a blinking LED (if there’s one attached to the pin in <code>src/main.rs</code> – change it if not!) and the following output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>   Compiling stm32g474-example v0.1.0 (/home/you/stm32g474-example)
+    Finished release [optimized + debuginfo] target(s) in 0.22s
+     Running `probe-rs run --chip STM32G474RETx target/thumbv7em-none-eabi/release/stm32g474-example`
+     Erasing sectors ✔ [00:00:00] [#########################################################] 18.00 KiB/18.00 KiB @ 54.09 KiB/s (eta 0s )
+ Programming pages   ✔ [00:00:00] [#########################################################] 17.00 KiB/17.00 KiB @ 35.91 KiB/s (eta 0s )    Finished in 0.817s
+0.000000 TRACE BDCR configured: 00008200
+└─ embassy_stm32::rcc::bd::{impl#3}::init::{closure#4} @ /home/you/.cargo/git/checkouts/embassy-9312dcb0ed774b29/7703f47/embassy-stm32/src/fmt.rs:117
+0.000000 DEBUG rcc: Clocks { sys: Hertz(16000000), pclk1: Hertz(16000000), pclk1_tim: Hertz(16000000), pclk2: Hertz(16000000), pclk2_tim: Hertz(16000000), hclk1: Hertz(16000000), hclk2: Hertz(16000000), pll1_p: None, adc: None, adc34: None, rtc: Some(Hertz(32000)) }
+└─ embassy_stm32::rcc::set_freqs @ /home/you/.cargo/git/checkouts/embassy-9312dcb0ed774b29/7703f47/embassy-stm32/src/fmt.rs:130
+0.000000 INFO  Hello World!
+└─ embassy_stm32g474::____embassy_main_task::{async_fn#0} @ src/main.rs:14
+0.000091 INFO  high
+└─ embassy_stm32g474::____embassy_main_task::{async_fn#0} @ src/main.rs:19
+0.300201 INFO  low
+└─ embassy_stm32g474::____embassy_main_task::{async_fn#0} @ src/main.rs:23</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_best_practices"><a class="anchor" href="#_best_practices"></a>Best Practices</h3>
+<div class="paragraph">
+<p>Over time, a couple of best practices have emerged. The following list should serve as a guideline for developers writing embedded software in <em>Rust</em>, especially in the context of the <em>Embassy</em> framework.</p>
+</div>
+<div class="sect3">
+<h4 id="_passing_buffers_by_reference"><a class="anchor" href="#_passing_buffers_by_reference"></a>Passing Buffers by Reference</h4>
+<div class="paragraph">
+<p>It may be tempting to pass arrays or wrappers, like <a href="https://docs.rs/heapless/latest/heapless/"><code>heapless::Vec</code></a>,
+to a function or return one just like you would with a <code>std::Vec</code>. However, in most embedded applications you don&#8217;t
+want to spend resources on an allocator and end up placing buffers on the stack. This, however, can easily blow up
+your stack if you are not careful.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">fn process_buffer(mut buf: [u8; 1024]) -&gt; [u8; 1024] {
+    // do stuff and return new buffer
+    for elem in buf.iter_mut() {
+        *elem = 0;
+    }
+    buf
+}
+
+pub fn main() -&gt; () {
+    let buf = [1u8; 1024];
+    let buf_new = process_buffer(buf);
+    // do stuff with buf_new
+    ()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When calling <code>process_buffer</code> in your program, a copy of the buffer you pass to the function will be created,
+consuming another 1024 bytes.
+After the processing, another 1024 byte buffer will be placed on the stack to be returned to the caller.
+(You can check the assembly, there will be two memcopy operations, e.g., <code>bl __aeabi_memcpy</code> when compiling for a Cortex-M processor.)</p>
+</div>
+<div class="paragraph">
+<p><strong>Possible Solution:</strong></p>
+</div>
+<div class="paragraph">
+<p>Pass the data by reference and not by value on both, the way in and the way out.
+For example, you could return a slice of the input buffer as the output.
+Requiring the lifetime of the input slice and the output slice to be the same, the memory safetly of this procedure will be enforced by the compiler.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">fn process_buffer&lt;'a&gt;(buf: &amp;'a mut [u8]) -&gt; &amp;'a mut[u8] {
+    for elem in buf.iter_mut() {
+        *elem = 0;
+    }
+    buf
+}
+
+pub fn main() -&gt; () {
+    let mut buf = [1u8; 1024];
+    let buf_new = process_buffer(&amp;mut buf);
+    // do stuff with buf_new
+    ()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_from_bare_metal_to_async_rust"><a class="anchor" href="#_from_bare_metal_to_async_rust"></a>From bare metal to async Rust</h3>
+<div class="paragraph">
+<p>If you&#8217;re new to Embassy, it can be overwhelming to grasp all the terminology and concepts. This guide aims to clarify the different layers in Embassy, which problem each layer solves for the application writer.</p>
+</div>
+<div class="paragraph">
+<p>This guide uses the STM32 IOT01A board, but should be easy to translate to any STM32 chip. For nRF, the PAC itself is not maintained within the Embassy project, but the concepts and the layers are similar.</p>
+</div>
+<div class="paragraph">
+<p>The application we&#8217;ll write is a simple 'push button, blink led' application, which is great for illustrating input and output handling for each of the examples we&#8217;ll go through. We&#8217;ll start at the Peripheral Access Crate (PAC) example and end at the async example.</p>
+</div>
+<div class="sect3">
+<h4 id="_pac_version"><a class="anchor" href="#_pac_version"></a>PAC version</h4>
+<div class="paragraph">
+<p>The PAC is the lowest API for accessing peripherals and registers, if you don&#8217;t count reading/writing directly to memory addresses. It provides distinct types to make accessing peripheral registers easier, but it does not prevent you from writing unsafe code.</p>
+</div>
+<div class="paragraph">
+<p>Writing an application using the PAC directly is therefore not recommended, but if the functionality you want to use is not exposed in the upper layers, that&#8217;s what you need to use.</p>
+</div>
+<div class="paragraph">
+<p>The blinky app using PAC is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#![no_std]
+#![no_main]
+
+use pac::gpio::vals;
+use {defmt_rtt as _, panic_probe as _, stm32_metapac as pac};
+
+#[cortex_m_rt::entry]
+fn main() -&gt; ! {
+    // Enable GPIO clock
+    let rcc = pac::RCC;
+    unsafe {
+        rcc.ahb2enr().modify(|w| {
+            w.set_gpioben(true);
+            w.set_gpiocen(true);
+        });
+
+        rcc.ahb2rstr().modify(|w| {
+            w.set_gpiobrst(true);
+            w.set_gpiocrst(true);
+            w.set_gpiobrst(false);
+            w.set_gpiocrst(false);
+        });
+    }
+
+    // Setup button
+    let gpioc = pac::GPIOC;
+    const BUTTON_PIN: usize = 13;
+    unsafe {
+        gpioc.pupdr().modify(|w| w.set_pupdr(BUTTON_PIN, vals::Pupdr::PULLUP));
+        gpioc.otyper().modify(|w| w.set_ot(BUTTON_PIN, vals::Ot::PUSHPULL));
+        gpioc.moder().modify(|w| w.set_moder(BUTTON_PIN, vals::Moder::INPUT));
+    }
+
+    // Setup LED
+    let gpiob = pac::GPIOB;
+    const LED_PIN: usize = 14;
+    unsafe {
+        gpiob.pupdr().modify(|w| w.set_pupdr(LED_PIN, vals::Pupdr::FLOATING));
+        gpiob.otyper().modify(|w| w.set_ot(LED_PIN, vals::Ot::PUSHPULL));
+        gpiob.moder().modify(|w| w.set_moder(LED_PIN, vals::Moder::OUTPUT));
+    }
+
+    // Main loop
+    loop {
+        unsafe {
+            if gpioc.idr().read().idr(BUTTON_PIN) == vals::Idr::LOW {
+                gpiob.bsrr().write(|w| w.set_bs(LED_PIN, true));
+            } else {
+                gpiob.bsrr().write(|w| w.set_br(LED_PIN, true));
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, a lot of code is needed to enable the peripheral clocks and to configure the input pins and the output pins of the application.</p>
+</div>
+<div class="paragraph">
+<p>Another downside of this application is that it is busy-looping while polling the button state. This prevents the microcontroller from utilizing any sleep mode to save power.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hal_version"><a class="anchor" href="#_hal_version"></a>HAL version</h4>
+<div class="paragraph">
+<p>To simplify our application, we can use the HAL instead. The HAL exposes higher level APIs that handle details such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Automatically enabling the peripheral clock when you&#8217;re using the peripheral</p>
+</li>
+<li>
+<p>Deriving and applying register configuration from higher level types</p>
+</li>
+<li>
+<p>Implementing the embedded-hal traits to make peripherals useful in third party drivers</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The HAL example is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#![no_std]
+#![no_main]
+
+use cortex_m_rt::entry;
+use embassy_stm32::gpio::{Input, Level, Output, Pull, Speed};
+use {defmt_rtt as _, panic_probe as _};
+
+#[entry]
+fn main() -&gt; ! {
+    let p = embassy_stm32::init(Default::default());
+    let mut led = Output::new(p.PB14, Level::High, Speed::VeryHigh);
+    let button = Input::new(p.PC13, Pull::Up);
+
+    loop {
+        if button.is_low() {
+            led.set_high();
+        } else {
+            led.set_low();
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, the application becomes a lot simpler, even without using any async code. The <code>Input</code> and <code>Output</code> types hide all the details of accessing the GPIO registers and allow you to use a much simpler API for querying the state of the button and toggling the LED output.</p>
+</div>
+<div class="paragraph">
+<p>The same downside from the PAC example still applies though: the application is busy looping and consuming more power than necessary.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_interrupt_driven"><a class="anchor" href="#_interrupt_driven"></a>Interrupt driven</h4>
+<div class="paragraph">
+<p>To save power, we need to configure the application so that it can be notified when the button is pressed using an interrupt.</p>
+</div>
+<div class="paragraph">
+<p>Once the interrupt is configured, the application can instruct the microcontroller to enter a sleep mode, consuming very little power.</p>
+</div>
+<div class="paragraph">
+<p>Given Embassy focus on async Rust (which we&#8217;ll come back to after this example), the example application must use a combination of the HAL and PAC in order to use interrupts. For this reason, the application also contains some helper functions to access the PAC (not shown below).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#![no_std]
+#![no_main]
+
+use core::cell::RefCell;
+
+use cortex_m::interrupt::Mutex;
+use cortex_m::peripheral::NVIC;
+use cortex_m_rt::entry;
+use embassy_stm32::gpio::{Input, Level, Output, Pull, Speed};
+use embassy_stm32::{interrupt, pac};
+use {defmt_rtt as _, panic_probe as _};
+
+static BUTTON: Mutex&lt;RefCell&lt;Option&lt;Input&lt;'static&gt;&gt;&gt;&gt; = Mutex::new(RefCell::new(None));
+static LED: Mutex&lt;RefCell&lt;Option&lt;Output&lt;'static&gt;&gt;&gt;&gt; = Mutex::new(RefCell::new(None));
+
+#[entry]
+fn main() -&gt; ! {
+    let p = embassy_stm32::init(Default::default());
+    let led = Output::new(p.PB14, Level::Low, Speed::Low);
+    let mut button = Input::new(p.PC13, Pull::Up);
+
+    cortex_m::interrupt::free(|cs| {
+        enable_interrupt(&amp;mut button);
+
+        LED.borrow(cs).borrow_mut().replace(led);
+        BUTTON.borrow(cs).borrow_mut().replace(button);
+
+        unsafe { NVIC::unmask(pac::Interrupt::EXTI15_10) };
+    });
+
+    loop {
+        cortex_m::asm::wfe();
+    }
+}
+
+#[interrupt]
+fn EXTI15_10() {
+    cortex_m::interrupt::free(|cs| {
+        let mut button = BUTTON.borrow(cs).borrow_mut();
+        let button = button.as_mut().unwrap();
+
+        let mut led = LED.borrow(cs).borrow_mut();
+        let led = led.as_mut().unwrap();
+        if check_interrupt(button) {
+            if button.is_low() {
+                led.set_high();
+            } else {
+                led.set_low();
+            }
+        }
+        clear_interrupt(button);
+    });
+}
+//
+//
+//
+//</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The simple application is now more complex again, primarily because of the need to keep the button and LED states in the global scope where it is accessible by the main application loop, as well as the interrupt handler.</p>
+</div>
+<div class="paragraph">
+<p>To do that, the types must be guarded by a mutex, and interrupts must be disabled whenever we are accessing this global state to gain access to the peripherals.</p>
+</div>
+<div class="paragraph">
+<p>Luckily, there is an elegant solution to this problem when using Embassy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_async_version"><a class="anchor" href="#_async_version"></a>Async version</h4>
+<div class="paragraph">
+<p>It&#8217;s time to use the Embassy capabilities to its fullest. At the core, Embassy has an async executor, or a runtime for async tasks if you will. The executor polls a set of tasks (defined at compile time), and whenever a task <code>blocks</code>, the executor will run another task, or put the microcontroller to sleep.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#![no_std]
+#![no_main]
+
+use embassy_executor::Spawner;
+use embassy_stm32::exti::ExtiInput;
+use embassy_stm32::gpio::{Level, Output, Pull, Speed};
+use {defmt_rtt as _, panic_probe as _};
+
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    let p = embassy_stm32::init(Default::default());
+    let mut led = Output::new(p.PB14, Level::Low, Speed::VeryHigh);
+    let mut button = ExtiInput::new(p.PC13, p.EXTI13, Pull::Up);
+
+    loop {
+        button.wait_for_any_edge().await;
+        if button.is_low() {
+            led.set_high();
+        } else {
+            led.set_low();
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The async version looks very similar to the HAL version, apart from a few minor details:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The main entry point is annotated with a different macro and has an async type signature. This macro creates and starts an Embassy runtime instance and launches the main application task. Using the <code>Spawner</code> instance, the application may spawn other tasks.</p>
+</li>
+<li>
+<p>The peripheral initialization is done by the main macro, and is handed to the main task.</p>
+</li>
+<li>
+<p>Before checking the button state, the application is awaiting a transition in the pin state (low &#8594; high or high &#8594; low).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When <code>button.await_for_any_edge().await</code> is called, the executor will pause the main task and put the microcontroller in sleep mode, unless there are other tasks that can run. Internally, the Embassy HAL has configured the interrupt handler for the button (in <code>ExtiButton</code>), so that whenever an interrupt is raised, the task awaiting the button will be woken up.</p>
+</div>
+<div class="paragraph">
+<p>The minimal overhead of the executor and the ability to run multiple tasks "concurrently" combined with the enormous simplification of the application, makes <code>async</code> a great fit for embedded.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h4>
+<div class="paragraph">
+<p>We have seen how the same application can be written at the different abstraction levels in Embassy. First starting out at the PAC level, then using the HAL, then using interrupts, and then using interrupts indirectly using async Rust.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_system_description"><a class="anchor" href="#_system_description"></a>System description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes different parts of Embassy in more detail.</p>
+</div>
+<div class="sect2">
+<h3 id="_embassy_executor"><a class="anchor" href="#_embassy_executor"></a>Embassy executor</h3>
+<div class="paragraph">
+<p>The Embassy executor is an async/await executor designed for embedded usage along with support functionality for interrupts and timers.</p>
+</div>
+<div class="sect3">
+<h4 id="_features_2"><a class="anchor" href="#_features_2"></a>Features</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>No <code>alloc</code>, no heap needed. Task are statically allocated.</p>
+</li>
+<li>
+<p>No "fixed capacity" data structures, executor works with 1 or 1000 tasks without needing config/tuning.</p>
+</li>
+<li>
+<p>Integrated timer queue: sleeping is easy, just do <code>Timer::after_secs(1).await;</code>.</p>
+</li>
+<li>
+<p>No busy-loop polling: CPU sleeps when there&#8217;s no work to do, using interrupts or <code>WFE/SEV</code>.</p>
+</li>
+<li>
+<p>Efficient polling: a wake will only poll the woken task, not all of them.</p>
+</li>
+<li>
+<p>Fair: a task can&#8217;t monopolize CPU time even if it&#8217;s constantly being woken. All other tasks get a chance to run before a given task gets polled for the second time.</p>
+</li>
+<li>
+<p>Creating multiple executor instances is supported, to run tasks at different priority levels. This allows higher-priority tasks to preempt lower-priority tasks.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_executor_2"><a class="anchor" href="#_executor_2"></a>Executor</h4>
+<div class="paragraph">
+<p>The executor function is described below. The executor keeps a queue of tasks that it should poll. When a task is created, it is polled (1). The task will attempt to make progress until it reaches a point where it would be blocked. This may happen whenever a task is .await&#8217;ing an async function. When that happens, the task yields execution by (2) returning <code>Poll::Pending</code>. Once a task yields, the executor enqueues the task at the end of the run queue, and proceeds to (3) poll the next task in the queue. When a task is finished or canceled, it will not be enqueued again.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+The executor relies on tasks not blocking indefinitely, as this prevents the executor to regain control and schedule another task.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/embassy_executor.png" alt="Executor model">
+</div>
+</div>
+<div class="paragraph">
+<p>If you use the <code>#[embassy_executor::main]</code> macro in your application, it creates the <code>Executor</code> for you and spawns the main entry point as the first task. You can also create the Executor manually, and you can in fact create multiple Executors.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_interrupts"><a class="anchor" href="#_interrupts"></a>Interrupts</h4>
+<div class="paragraph">
+<p>Interrupts are a common way for peripherals to signal completion of some operation and fits well with the async execution model. The following diagram describes a typical application flow where (1) a task is polled and is attempting to make progress. The task then (2) instructs the peripheral to perform some operation, and awaits. After some time has passed, (3) an interrupt is raised, marking the completion of the operation.</p>
+</div>
+<div class="paragraph">
+<p>The peripheral HAL then (4) ensures that interrupt signals are routed to the peripheral and updating the peripheral state with the results of the operation. The executor is then (5) notified that the task should be polled, which it will do.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/embassy_irq.png" alt="Interrupt handling">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+There exists a special executor named <code>InterruptExecutor</code> which can be driven by an interrupt. This can be used to drive tasks at different priority levels by creating multiple <code>InterruptExecutor</code> instances.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_time_2"><a class="anchor" href="#_time_2"></a>Time</h4>
+<div class="paragraph">
+<p>Embassy features an internal timer queue enabled by the <code>time</code> feature flag. When enabled, Embassy assumes a time <code>Driver</code> implementation existing for the platform. Embassy provides time drivers for the nRF, STM32, RPi Pico, WASM and Std platforms.</p>
+</div>
+<div class="paragraph">
+<p>The timer driver implementations for the embedded platforms might support only a fixed number of alarms that can be set. Make sure the number of tasks you expect wanting to use the timer at the same time do not exceed this limit.</p>
+</div>
+<div class="paragraph">
+<p>The timer speed is configurable at compile time using the <code>time-tick-&lt;frequency&gt;</code>. At present, the timer may be configured to run at 1000 Hz, 32768 Hz, or 1 MHz. Before changing the defaults, make sure the target HAL supports the particular frequency setting.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you do not require timers in your application, not enabling the <code>time</code> feature can save some CPU cycles and reduce power usage.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bootloader"><a class="anchor" href="#_bootloader"></a>Bootloader</h3>
+<div class="paragraph">
+<p><code>embassy-boot</code> a lightweight bootloader supporting firmware application upgrades in a power-fail-safe way, with trial boots and rollbacks.</p>
+</div>
+<div class="paragraph">
+<p>The bootloader can be used either as a library or be flashed directly if you are happy with the default configuration and capabilities.</p>
+</div>
+<div class="paragraph">
+<p>By design, the bootloader does not provide any network capabilities. Networking capabilities for fetching new firmware can be provided by the user application, using the bootloader as a library for updating the firmware, or by using the bootloader as a library and adding this capability yourself.</p>
+</div>
+<div class="paragraph">
+<p>The bootloader supports both internal and external flash by relying on the <code>embedded-storage</code> traits. The bootloader optionally supports the verification of firmware that has been digitally signed (recommended).</p>
+</div>
+<div class="sect3">
+<h4 id="_hardware_support"><a class="anchor" href="#_hardware_support"></a>Hardware support</h4>
+<div class="paragraph">
+<p>The bootloader supports</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nRF52 with and without softdevice</p>
+</li>
+<li>
+<p>STM32 L4, WB, WL, L1, L0, F3, F7 and H7</p>
+</li>
+<li>
+<p>Raspberry Pi: RP2040</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In general, the bootloader works on any platform that implements the <code>embedded-storage</code> traits for its internal flash, but may require custom initialization code to work.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_design"><a class="anchor" href="#_design"></a>Design</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/bootloader_flash.png" alt="Bootloader flash layout">
+</div>
+</div>
+<div class="paragraph">
+<p>The bootloader divides the storage into 4 main partitions, configurable when creating the bootloader
+instance or via linker scripts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>BOOTLOADER - Where the bootloader is placed. The bootloader itself consumes about 8kB of flash, but if you need to debug it and have space available, increasing this to 24kB will allow you to run the bootloader with probe-rs.</p>
+</li>
+<li>
+<p>ACTIVE - Where the main application is placed. The bootloader will attempt to load the application at the start of this partition. This partition is only written to by the bootloader. The size required for this partition depends on the size of your application.</p>
+</li>
+<li>
+<p>DFU - Where the application-to-be-swapped is placed. This partition is written to by the application. This partition must be at least 1 page bigger than the ACTIVE partition, since the swap algorithm uses the extra space to ensure power safe copy of data:</p>
+<div class="paragraph">
+<p>Partition Size<sub>dfu</sub>= Partition Size<sub>active</sub>+ Page Size<sub>active</sub></p>
+</div>
+<div class="paragraph">
+<p>All values are specified in bytes.</p>
+</div>
+</li>
+<li>
+<p>BOOTLOADER STATE - Where the bootloader stores the current state describing if the active and dfu partitions need to be swapped. When the new firmware has been written to the DFU partition, a magic field is written to instruct the bootloader that the partitions should be swapped. This partition must be able to store a magic field as well as the partition swap progress. The partition size given by:</p>
+<div class="paragraph">
+<p>Partition Size<sub>state</sub> = Write Size<sub>state</sub> + (2 × Partition Size<sub>active</sub> / Page Size<sub>active</sub>)</p>
+</div>
+<div class="paragraph">
+<p>All values are specified in bytes.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The partitions for ACTIVE (+BOOTLOADER), DFU and BOOTLOADER_STATE may be placed in separate flash. The page size used by the bootloader is determined by the lowest common multiple of the ACTIVE and DFU page sizes.
+The BOOTLOADER_STATE partition must be big enough to store one word per page in the ACTIVE and DFU partitions combined.</p>
+</div>
+<div class="paragraph">
+<p>The bootloader has a platform-agnostic part, which implements the power fail safe swapping algorithm given the boundaries set by the partitions. The platform-specific part is a minimal shim that provides additional functionality such as watchdogs or supporting the nRF52 softdevice.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The linker scripts for the application and bootloader look similar, but the FLASH region must point to the BOOTLOADER partition for the bootloader, and the ACTIVE partition for the application.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_firmwareupdater"><a class="anchor" href="#_firmwareupdater"></a>FirmwareUpdater</h5>
+<div class="paragraph">
+<p>The <code>FirmwareUpdater</code> is an object for conveniently flashing firmware to the DFU partition and subsequently marking it as being ready for swapping with the active partition on the next reset. Its principle methods are <code>write_firmware</code>, which is called once per the size of the flash "write block" (typically 4KiB), and <code>mark_updated</code>, which is the final call.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_verification"><a class="anchor" href="#_verification"></a>Verification</h5>
+<div class="paragraph">
+<p>The bootloader supports the verification of firmware that has been flashed to the DFU partition. Verification requires that firmware has been signed digitally using <a href="https://ed25519.cr.yp.to/"><code>ed25519</code></a> signatures. With verification enabled, the <code>FirmwareUpdater::verify_and_mark_updated</code> method is called in place of <code>mark_updated</code>. A public key and signature are required, along with the actual length of the firmware that has been flashed. If verification fails then the firmware will not be marked as updated and therefore be rejected.</p>
+</div>
+<div class="paragraph">
+<p>Signatures are normally conveyed with the firmware to be updated and not written to flash. How signatures are provided is a firmware responsibility.</p>
+</div>
+<div class="paragraph">
+<p>To enable verification use either the <code>ed25519-dalek</code> or <code>ed25519-salty</code> features when depending on the <code>embassy-boot</code> crate. We recommend <code>ed25519-salty</code> at this time due to its small size.</p>
+</div>
+<div class="sect5">
+<h6 id="_tips_on_keys_and_signing_with_ed25519"><a class="anchor" href="#_tips_on_keys_and_signing_with_ed25519"></a>Tips on keys and signing with ed25519</h6>
+<div class="paragraph">
+<p>Ed25519 is a public key signature system where you are responsible for keeping the private key secure. We recommend embedding the <strong>public</strong> key in your program so that it can be easily passed to <code>verify_and_mark_updated</code>. An example declaration of the public key in your firmware:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">static PUBLIC_SIGNING_KEY: &amp;[u8] = include_bytes!("key.pub");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Signatures are often conveyed along with firmware by appending them.</p>
+</div>
+<div class="paragraph">
+<p>Ed25519 keys can be generated by a variety of tools. We recommend <a href="https://man.openbsd.org/signify"><code>signify</code></a> as it is in wide use to sign and verify OpenBSD distributions, and is straightforward to use.</p>
+</div>
+<div class="paragraph">
+<p>The following set of Bash commands can be used to generate public and private keys on Unix platforms, and also generate a local <code>key.pub</code> file with the <code>signify</code> file headers removed. Declare a <code>SECRETS_DIR</code> environment variable in a secure location.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">signify -G -n -p $SECRETS_DIR/key.pub -s $SECRETS_DIR/key.sec
+tail -n1 $SECRETS_DIR/key.pub | base64 -d -i - | dd ibs=10 skip=1 &gt; key.pub
+chmod 700 $SECRETS_DIR/key.sec
+export SECRET_SIGNING_KEY=$(tail -n1 $SECRETS_DIR/key.sec)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, to sign your firmware given a declaration of <code>FIRMWARE_DIR</code> and a firmware filename of <code>myfirmware</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">shasum -a 512 -b $FIRMWARE_DIR/myfirmware &gt; $SECRETS_DIR/message.txt
+cat $SECRETS_DIR/message.txt | dd ibs=128 count=1 | xxd -p -r &gt; $SECRETS_DIR/message.txt
+signify -S -s $SECRETS_DIR/key.sec -m $SECRETS_DIR/message.txt -x $SECRETS_DIR/message.txt.sig
+cp $FIRMWARE_DIR/myfirmware $FIRMWARE_DIR/myfirmware+signed
+tail -n1 $SECRETS_DIR/message.txt.sig | base64 -d -i - | dd ibs=10 skip=1 &gt;&gt; $FIRMWARE_DIR/myfirmware+signed</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Remember, guard the <code>$SECRETS_DIR/key.sec</code> key as compromising it means that another party can sign your firmware.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_time_keeping"><a class="anchor" href="#_time_keeping"></a>Time-keeping</h3>
+<div class="paragraph">
+<p>In an embedded program, delaying a task is one of the most common actions taken. In an event loop, delays will need to be inserted to ensure
+that other tasks have a chance to run before the next iteration of the loop is called, if no other I/O is performed. Embassy provides abstractions
+to delay the current task for a specified interval of time.</p>
+</div>
+<div class="paragraph">
+<p>The interface for time-keeping in Embassy is handled by the <a href="https://crates.io/crates/embassy-time">embassy-time</a> crate. The types can be used with the internal
+timer queue in <a href="https://crates.io/crates/embassy-executor">embassy-executor</a> or a custom timer queue implementation.</p>
+</div>
+<div class="sect3">
+<h4 id="_timer"><a class="anchor" href="#_timer"></a>Timer</h4>
+<div class="paragraph">
+<p>The <code>embassy::time::Timer</code> type provides two timing methods.</p>
+</div>
+<div class="paragraph">
+<p><code>Timer::at</code> creates a future that completes at the specified <code>Instant</code>, relative to the system boot time.
+<code>Timer::after</code> creates a future that completes after the specified <code>Duration</code>, relative to when the future was created.</p>
+</div>
+<div class="paragraph">
+<p>An example of a delay is provided as follows:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Dependencies needed to run this example <a href="/book/dev/basic_application.html#_the_cargo_toml">can be found here</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use embassy::executor::{task, Executor};
+use embassy::time::{Duration, Timer};
+
+#[task]
+/// Task that ticks periodically
+async fn tick_periodic() -&gt; ! {
+    loop {
+        rprintln!("tick!");
+        // async sleep primitive, suspends the task for 500ms.
+        Timer::after(Duration::from_millis(500)).await;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delay"><a class="anchor" href="#_delay"></a>Delay</h4>
+<div class="paragraph">
+<p>The <code>embassy::time::Delay</code> type provides an implementation of the <a href="https://docs.rs/embedded-hal/1.0.0/embedded_hal/delay/index.html">embedded-hal</a> and
+<a href="https://docs.rs/embedded-hal-async/latest/embedded_hal_async/delay/index.html">embedded-hal-async</a> traits. This can be used for drivers
+that expect a generic delay implementation to be provided.</p>
+</div>
+<div class="paragraph">
+<p>An example of how this can be used:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Dependencies needed to run this example <a href="/book/dev/basic_application.html#_the_cargo_toml">can be found here</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use embassy::executor::{task, Executor};
+
+#[task]
+/// Task that ticks periodically
+async fn tick_periodic() -&gt; ! {
+    loop {
+        rprintln!("tick!");
+        // async sleep primitive, suspends the task for 500ms.
+        generic_delay(embassy::time::Delay).await
+    }
+}
+
+async fn generic_delay&lt;D: embedded_hal_async::delay::DelayNs&gt;(delay: D) {
+      delay.delay_ms(500).await;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hardware_abstraction_layer_hal"><a class="anchor" href="#_hardware_abstraction_layer_hal"></a>Hardware Abstraction Layer (HAL)</h3>
+<div class="paragraph">
+<p>Embassy provides HALs for several microcontroller families:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>embassy-nrf</code> for the nRF microcontrollers from Nordic Semiconductor</p>
+</li>
+<li>
+<p><code>embassy-stm32</code> for STM32 microcontrollers from ST Microelectronics</p>
+</li>
+<li>
+<p><code>embassy-rp</code> for the Raspberry Pi RP2040 microcontrollers</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These HALs implement async/await functionality for most peripherals while also implementing the
+async traits in <code>embedded-hal</code> and <code>embedded-hal-async</code>. You can also use these HALs with another executor.</p>
+</div>
+<div class="paragraph">
+<p>For the ESP32 series, there is an <a href="https://github.com/esp-rs/esp-hal">esp-hal</a> which you can use.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_embassy_nrf_hal"><a class="anchor" href="#_embassy_nrf_hal"></a>Embassy nRF HAL</h3>
+<div class="paragraph">
+<p>The <a href="https://github.com/embassy-rs/embassy/tree/master/embassy-nrf">Embassy nRF HAL</a> is based on the PACs (Peripheral Access Crate) from <a href="https://github.com/nrf-rs/">nrf-rs</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_timer_driver"><a class="anchor" href="#_timer_driver"></a>Timer driver</h4>
+<div class="paragraph">
+<p>The nRF timer driver operates at 32768 Hz by default.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_peripherals"><a class="anchor" href="#_peripherals"></a>Peripherals</h4>
+<div class="paragraph">
+<p>The following peripherals have a HAL implementation at present</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PWM</p>
+</li>
+<li>
+<p>SPIM</p>
+</li>
+<li>
+<p>QSPI</p>
+</li>
+<li>
+<p>NVMC</p>
+</li>
+<li>
+<p>GPIOTE</p>
+</li>
+<li>
+<p>RNG</p>
+</li>
+<li>
+<p>TIMER</p>
+</li>
+<li>
+<p>WDT</p>
+</li>
+<li>
+<p>TEMP</p>
+</li>
+<li>
+<p>PPI</p>
+</li>
+<li>
+<p>UARTE</p>
+</li>
+<li>
+<p>TWIM</p>
+</li>
+<li>
+<p>SAADC</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bluetooth_2"><a class="anchor" href="#_bluetooth_2"></a>Bluetooth</h4>
+<div class="paragraph">
+<p>For bluetooth, you can use the <a href="https://github.com/embassy-rs/nrf-softdevice">nrf-softdevice</a> crate.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_embassy_stm32_hal"><a class="anchor" href="#_embassy_stm32_hal"></a>Embassy STM32 HAL</h3>
+<div class="paragraph">
+<p>The <a href="https://github.com/embassy-rs/embassy/tree/master/embassy-stm32">Embassy STM32 HAL</a> is based on the <code>stm32-metapac</code> project.</p>
+</div>
+<div class="sect3">
+<h4 id="_the_infinite_variant_problem"><a class="anchor" href="#_the_infinite_variant_problem"></a>The infinite variant problem</h4>
+<div class="paragraph">
+<p>STM32 microcontrollers come in many families, and flavors and supporting all of them is a big undertaking. Embassy has taken advantage of the fact
+that the STM32 peripheral versions are shared across chip families. Instead of re-implementing the SPI
+peripheral for every STM32 chip family, embassy has a single SPI implementation that depends on
+code-generated register types that are identical for STM32 families with the same version of a given peripheral.</p>
+</div>
+<div class="sect4">
+<h5 id="_the_metapac"><a class="anchor" href="#_the_metapac"></a>The metapac</h5>
+<div class="paragraph">
+<p>The <code>stm32-metapac</code> module uses pre-generated chip and register definitions for STM32 chip families to generate register types. This is done at compile time based on Cargo feature flags.</p>
+</div>
+<div class="paragraph">
+<p>The chip and register definitions are located in a separate module, <code>stm32-data</code>, which is modified whenever a bug is found in the definitions, or when adding support for new chip families.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_hal"><a class="anchor" href="#_the_hal"></a>The HAL</h5>
+<div class="paragraph">
+<p>The <code>embassy-stm32</code> module contains the HAL implementation for all STM32 families. The implementation uses automatically derived feature flags to support the correct version of a given peripheral for a given chip family.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_timer_driver_2"><a class="anchor" href="#_timer_driver_2"></a>Timer driver</h4>
+<div class="paragraph">
+<p>The STM32 timer driver operates at 32768 Hz by default.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sharing_peripherals_between_tasks"><a class="anchor" href="#_sharing_peripherals_between_tasks"></a>Sharing peripherals between tasks</h3>
+<div class="paragraph">
+<p>Often times, more than one task needs access to the same resource (pin, communication interface, etc.). Embassy provides many different synchronization primitives in the <a href="https://crates.io/crates/embassy-sync">embassy-sync</a> crate.</p>
+</div>
+<div class="paragraph">
+<p>The following examples shows different ways to use the on-board LED on a Raspberry Pi Pico board by two tasks simultaneously.</p>
+</div>
+<div class="sect3">
+<h4 id="_sharing_using_a_mutex"><a class="anchor" href="#_sharing_using_a_mutex"></a>Sharing using a Mutex</h4>
+<div class="paragraph">
+<p>Using mutual exclusion is the simplest way to share a peripheral.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Dependencies needed to run this example <a href="/book/dev/basic_application.html#_the_cargo_toml">can be found here</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use defmt::*;
+use embassy_executor::Spawner;
+use embassy_rp::gpio;
+use embassy_sync::blocking_mutex::raw::ThreadModeRawMutex;
+use embassy_sync::mutex::Mutex;
+use embassy_time::{Duration, Ticker};
+use gpio::{AnyPin, Level, Output};
+use {defmt_rtt as _, panic_probe as _};
+
+type LedType = Mutex&lt;ThreadModeRawMutex, Option&lt;Output&lt;'static, AnyPin&gt;&gt;&gt;;
+static LED: LedType = Mutex::new(None);
+
+#[embassy_executor::main]
+async fn main(spawner: Spawner) {
+    let p = embassy_rp::init(Default::default());
+    // set the content of the global LED reference to the real LED pin
+    let led = Output::new(AnyPin::from(p.PIN_25), Level::High);
+    // inner scope is so that once the mutex is written to, the MutexGuard is dropped, thus the
+    // Mutex is released
+    {
+        *(LED.lock().await) = Some(led);
+    }
+    let dt = 100 * 1_000_000;
+    let k = 1.003;
+
+    unwrap!(spawner.spawn(toggle_led(&amp;LED, Duration::from_nanos(dt))));
+    unwrap!(spawner.spawn(toggle_led(&amp;LED, Duration::from_nanos((dt as f64 * k) as u64))));
+}
+
+// A pool size of 2 means you can spawn two instances of this task.
+#[embassy_executor::task(pool_size = 2)]
+async fn toggle_led(led: &amp;'static LedType, delay: Duration) {
+    let mut ticker = Ticker::every(delay);
+    loop {
+        {
+            let mut led_unlocked = led.lock().await;
+            if let Some(pin_ref) = led_unlocked.as_mut() {
+                pin_ref.toggle();
+            }
+        }
+        ticker.next().await;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The structure facilitating access to the resource is the defined <code>LedType</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="_why_so_complicated"><a class="anchor" href="#_why_so_complicated"></a>Why so complicated</h5>
+<div class="paragraph">
+<p>Unwrapping the layers gives insight into why each one is needed.</p>
+</div>
+<div class="sect5">
+<h6 id="_mutexrawmutextype_t"><a class="anchor" href="#_mutexrawmutextype_t"></a><code>Mutex&lt;RawMutexType, T&gt;</code></h6>
+<div class="paragraph">
+<p>The mutex is there so if one task gets the resource first and begins modifying it, all other tasks wanting to write will have to wait (the <code>led.lock().await</code> will return immediately if no task has locked the mutex, and will block if it is accessed somewhere else).</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_optiont"><a class="anchor" href="#_optiont"></a><code>Option&lt;T&gt;</code></h6>
+<div class="paragraph">
+<p>The <code>LED</code> variable needs to be defined outside the main task as references accepted by tasks need to be <code>'static</code>. However, if it is outside the main task, it cannot be initialised to point to any pin, as the pins themselves are not initialised. Thus, it is set to <code>None</code>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_outputanypin"><a class="anchor" href="#_outputanypin"></a><code>Output&lt;AnyPin&gt;</code></h6>
+<div class="paragraph">
+<p>To indicate that the pin will be set to an Output. The <code>AnyPin</code> could have been <code>embassy_rp::peripherals::PIN_25</code>, however this option lets the <code>toggle_led</code> function be more generic.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sharing_using_a_channel"><a class="anchor" href="#_sharing_using_a_channel"></a>Sharing using a Channel</h4>
+<div class="paragraph">
+<p>A channel is another way to ensure exclusive access to a resource. Using a channel is great in the cases where the access can happen at a later point in time, allowing you to enqueue operations and do other things.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Dependencies needed to run this example <a href="/book/dev/basic_application.html#_the_cargo_toml">can be found here</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use defmt::*;
+use embassy_executor::Spawner;
+use embassy_rp::gpio;
+use embassy_sync::blocking_mutex::raw::ThreadModeRawMutex;
+use embassy_sync::channel::{Channel, Sender};
+use embassy_time::{Duration, Ticker};
+use gpio::{AnyPin, Level, Output};
+use {defmt_rtt as _, panic_probe as _};
+
+enum LedState {
+     Toggle,
+}
+static CHANNEL: Channel&lt;ThreadModeRawMutex, LedState, 64&gt; = Channel::new();
+
+#[embassy_executor::main]
+async fn main(spawner: Spawner) {
+    let p = embassy_rp::init(Default::default());
+    let mut led = Output::new(AnyPin::from(p.PIN_25), Level::High);
+
+    let dt = 100 * 1_000_000;
+    let k = 1.003;
+
+    unwrap!(spawner.spawn(toggle_led(CHANNEL.sender(), Duration::from_nanos(dt))));
+    unwrap!(spawner.spawn(toggle_led(CHANNEL.sender(), Duration::from_nanos((dt as f64 * k) as u64))));
+
+    loop {
+        match CHANNEL.receive().await {
+            LedState::Toggle =&gt; led.toggle(),
+        }
+    }
+}
+
+// A pool size of 2 means you can spawn two instances of this task.
+#[embassy_executor::task(pool_size = 2)]
+async fn toggle_led(control: Sender&lt;'static, ThreadModeRawMutex, LedState, 64&gt;, delay: Duration) {
+    let mut ticker = Ticker::every(delay);
+    loop {
+        control.send(LedState::Toggle).await;
+        ticker.next().await;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example replaces the Mutex with a Channel, and uses another task (the main loop) to drive the LED. The advantage of this approach is that only a single task references the peripheral, separating concerns. However, using a Mutex has a lower overhead and might be necessary if you need to ensure
+that the operation is ecompleted before continuing to do other work in your task.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_developer_documentation"><a class="anchor" href="#_developer_documentation"></a>Developer Documentation</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_developer_documentation_stm32"><a class="anchor" href="#_developer_documentation_stm32"></a>Developer Documentation: STM32</h3>
+<div class="sect3">
+<h4 id="_understanding_metapac"><a class="anchor" href="#_understanding_metapac"></a>Understanding metapac</h4>
+<div class="paragraph">
+<p>When a project that imports <code>embassy-stm32</code> is compiled, that project selects the feature corresponding to the chip that project is using. Based on that feature, <code>embassy-stm32</code> selects supported <a href="https://anysilicon.com/ip-intellectual-property-core-semiconductors/">IP</a> for the chip, and enables the corresponding HAL implementations. But how does <code>embassy-stm32</code> know what IP the chip contains, out of the hundreds of chips that we support? It&#8217;s a long story that starts with <code>stm32-data-sources</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_stm32_data_sources"><a class="anchor" href="#_stm32_data_sources"></a><code>stm32-data-sources</code></h4>
+<div class="paragraph">
+<p><a href="https://github.com/embassy-rs/stm32-data-sources"><code>stm32-data-sources</code></a> is as mostly barren repository. It has no README, no documentation, and few watchers. But it&#8217;s the core of what makes <code>embassy-stm32</code> possible. The data for every chip that we support is taken in part from a corresponding XML file like <a href="https://github.com/embassy-rs/stm32-data-sources/blob/b8b85202e22a954d6c59d4a43d9795d34cff05cf/cubedb/mcu/STM32F051K4Ux.xml"><code>STM32F051K4Ux.xml</code></a>. In that file, you&#8217;ll see lines like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;IP InstanceName="I2C1" Name="I2C" Version="i2c2_v1_1_Cube"/&gt;
+    &lt;!-- snip  --&gt;
+    &lt;IP ConfigFile="TIM-STM32F0xx" InstanceName="TIM1" Name="TIM1_8F0" Version="gptimer2_v2_x_Cube"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These lines indicate that this chip has an i2c, and that it&#8217;s version is "v1_1". It also indicates that it has a general purpose timer that with a version of "v2_x". From this data, it&#8217;s possible to determine which implementations should be included in <code>embassy-stm32</code>. But actually doing that is another matter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_stm32_data"><a class="anchor" href="#_stm32_data"></a><code>stm32-data</code></h4>
+<div class="paragraph">
+<p>While all users of this project are familiar with <code>embassy-stm32</code>, fewer are familiar with the project that powers it: <code>stm32-data</code>. This project doesn&#8217;t just aim to generate data for <code>embassy-stm32</code>, but for machine consumption in general. To acheive this, information from multiple files from the <code>stm32-data-sources</code> project are combined and parsed to assign register block implementations for each supported IP. The core of this matching resides in <code>chips.rs</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">    (".*:I2C:i2c2_v1_1", ("i2c", "v2", "I2C")),
+    // snip
+    (r".*TIM\d.*:gptimer.*", ("timer", "v1", "TIM_GP16")),</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, the i2c version corresponds to our "v2" and the general purpose timer version corresponds to our "v1". Therefore, the <code>i2c_v2.yaml</code> and <code>timer_v1.yaml</code> register block implementations are assigned to those IP, respectively. The result is that these lines arr generated in <code>STM32F051K4.json</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">    {
+        "name": "I2C1",
+        "address": 1073763328,
+        "registers": {
+            "kind": "i2c",
+            "version": "v2",
+            "block": "I2C"
+        },
+        // snip
+    }
+    // snip
+    {
+        "name": "TIM1",
+        "address": 1073818624,
+        "registers": {
+            "kind": "timer",
+            "version": "v1",
+            "block": "TIM_ADV"
+        },
+        // snip
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to register blocks, data for pin and RCC mapping is also generated and consumed by <code>embassy-stm32</code>. <code>stm32-metapac-gen</code> is used to package and publish the data as a crate.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_embassy_stm32"><a class="anchor" href="#_embassy_stm32"></a><code>embassy-stm32</code></h4>
+<div class="paragraph">
+<p>In the <code>lib.rs</code> file located in the root of <code>embassy-stm32</code>, you&#8217;ll see this line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[cfg(i2c)]
+pub mod i2c;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And in the <code>mod.rs</code> of the i2c mod, you&#8217;ll see this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[cfg_attr(i2c_v2, path = "v2.rs")]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because i2c is supported for STM32F051K4 and its version corresponds to our "v2", the <code>i2c</code> and <code>i2c_v2</code>, configuration directives will be present, and <code>embassy-stm32</code> will include these files, respectively. This and other configuration directives and tables are generated from the data for chip, allowing <code>embassy-stm32</code> to expressively and clearly adapt logic and implementations to what is required for each chip. Compared to other projects across the embedded ecosystem, <code>embassy-stm32</code> is the only project that can re-use code across the entire stm32 lineup and remove difficult-to-implement unsafe logic to the HAL.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frequently_asked_questions"><a class="anchor" href="#_frequently_asked_questions"></a>Frequently Asked Questions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are a list of unsorted, commonly asked questions and answers.</p>
+</div>
+<div class="paragraph">
+<p>Please feel free to add items to <a href="https://github.com/embassy-rs/embassy/edit/main/docs/modules/ROOT/pages/faq.adoc">this page</a>, especially if someone in the chat answered a question for you!</p>
+</div>
+<div class="sect2">
+<h3 id="_how_to_deploy_to_rp2040_without_a_debugging_probe"><a class="anchor" href="#_how_to_deploy_to_rp2040_without_a_debugging_probe"></a>How to deploy to RP2040 without a debugging probe.</h3>
+<div class="paragraph">
+<p>Install <a href="https://github.com/JoNil/elf2uf2-rs">elf2uf2-rs</a> for converting the generated elf binary into a uf2 file.</p>
+</div>
+<div class="paragraph">
+<p>Configure the runner to use this tool, add this to <code>.cargo/config.toml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "elf2uf2-rs --deploy --serial --verbose"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command-line parameters <code>--deploy</code> will detect your device and upload the binary, <code>--serial</code> starts a serial connection. See the documentation for more info.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_missing_main_macro"><a class="anchor" href="#_missing_main_macro"></a>Missing main macro</h3>
+<div class="paragraph">
+<p>If you see an error like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[embassy_executor::main]
+|                   ^^^^ could not find `main` in `embassy_executor`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are likely missing some features of the <code>embassy-executor</code> crate.</p>
+</div>
+<div class="paragraph">
+<p>For Cortex-M targets, check whether ALL of the following features are enabled in your <code>Cargo.toml</code> for the <code>embassy-executor</code> crate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>arch-cortex-m</code></p>
+</li>
+<li>
+<p><code>executor-thread</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For ESP32, consider using the executors and <code>#[main]</code> macro provided by your appropriate <a href="https://crates.io/crates/esp-hal-common">HAL crate</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_is_my_binary_so_big"><a class="anchor" href="#_why_is_my_binary_so_big"></a>Why is my binary so big?</h3>
+<div class="paragraph">
+<p>The first step to managing your binary size is to set up your <a href="https://doc.rust-lang.org/cargo/reference/profiles.html">profiles</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[profile.release]
+lto = true
+opt-level = "s"
+incremental = false
+codegen-units = 1
+# note: debug = true is okay - debuginfo isn't flashed to the device!
+debug = true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All of these flags are elaborated on in the Rust Book page linked above.</p>
+</div>
+<div class="sect3">
+<h4 id="_my_binary_is_still_big_filled_with_stdfmt_stuff"><a class="anchor" href="#_my_binary_is_still_big_filled_with_stdfmt_stuff"></a>My binary is still big&#8230;&#8203; filled with <code>std::fmt</code> stuff!</h4>
+<div class="paragraph">
+<p>This means your code is sufficiently complex that <code>panic!</code> invocation&#8217;s formatting requirements could not be optimized out, despite your usage of <code>panic-halt</code> or <code>panic-reset</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can remedy this by adding the following to your <code>.cargo/config.toml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[unstable]
+build-std = ["core"]
+build-std-features = ["panic_immediate_abort"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This replaces all panics with a <code>UDF</code> (undefined) instruction.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your chipset, this will exhibit different behavior.</p>
+</div>
+<div class="paragraph">
+<p>Refer to the spec for your chipset, but for <code>thumbv6m</code>, it results in a hardfault. Which can be configured like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">#[exception]
+unsafe fn HardFault(_frame: &amp;ExceptionFrame) -&gt; ! {
+    SCB::sys_reset() // &lt;- you could do something other than reset
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to cortex-m&#8217;s <a href="https://docs.rs/cortex-m-rt/latest/cortex_m_rt/attr.exception.html">exception handling</a> for more info.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_embassy_time_throws_linker_errors"><a class="anchor" href="#_embassy_time_throws_linker_errors"></a><code>embassy-time</code> throws linker errors</h3>
+<div class="paragraph">
+<p>If you see linker error like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">  = note: rust-lld: error: undefined symbol: _embassy_time_now
+          &gt;&gt;&gt; referenced by driver.rs:127 (src/driver.rs:127)
+          &gt;&gt;&gt;               embassy_time-846f66f1620ad42c.embassy_time.4f6a638abb75dd4c-cgu.0.rcgu.o:(embassy_time::driver::now::hefb1f99d6e069842) in archive Devel/Embedded/pogodyna/target/thumbv7em-none-eabihf/debug/deps/libembassy_time-846f66f1620ad42c.rlib
+
+          rust-lld: error: undefined symbol: _embassy_time_allocate_alarm
+          &gt;&gt;&gt; referenced by driver.rs:134 (src/driver.rs:134)
+          &gt;&gt;&gt;               embassy_time-846f66f1620ad42c.embassy_time.4f6a638abb75dd4c-cgu.0.rcgu.o:(embassy_time::driver::allocate_alarm::hf5145b6bd46706b2) in archive Devel/Embedded/pogodyna/target/thumbv7em-none-eabihf/debug/deps/libembassy_time-846f66f1620ad42c.rlib
+
+          rust-lld: error: undefined symbol: _embassy_time_set_alarm_callback
+          &gt;&gt;&gt; referenced by driver.rs:139 (src/driver.rs:139)
+          &gt;&gt;&gt;               embassy_time-846f66f1620ad42c.embassy_time.4f6a638abb75dd4c-cgu.0.rcgu.o:(embassy_time::driver::set_alarm_callback::h24f92388d96eafd2) in archive Devel/Embedded/pogodyna/target/thumbv7em-none-eabihf/debug/deps/libembassy_time-846f66f1620ad42c.rlib
+
+          rust-lld: error: undefined symbol: _embassy_time_set_alarm
+          &gt;&gt;&gt; referenced by driver.rs:144 (src/driver.rs:144)
+          &gt;&gt;&gt;               embassy_time-846f66f1620ad42c.embassy_time.4f6a638abb75dd4c-cgu.0.rcgu.o:(embassy_time::driver::set_alarm::h530a5b1f444a6d5b) in archive Devel/Embedded/pogodyna/target/thumbv7em-none-eabihf/debug/deps/libembassy_time-846f66f1620ad42c.rlib</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You probably need to enable a time driver for your HAL (not in <code>embassy-time</code>!). For example with <code>embassy-stm32</code>, you might need to enable <code>time-driver-any</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[dependencies.embassy-stm32]
+version = "0.1.0"
+features = [
+    # ...
+    "time-driver-any", # Add this line!
+    # ...
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are in the early project setup phase and not using anything from the HAL, make sure the HAL is explicitly used to prevent the linker removing it as dead code by adding this line to your source:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">use embassy_stm32 as _;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_error_only_one_package_in_the_dependency_graph_may_specify_the_same_links_value"><a class="anchor" href="#_error_only_one_package_in_the_dependency_graph_may_specify_the_same_links_value"></a>Error: <code>Only one package in the dependency graph may specify the same links value.</code></h3>
+<div class="paragraph">
+<p>You have multiple versions of the same crate in your dependency tree. This means that some of your
+embassy crates are coming from crates.io, and some from git, each of them pulling in a different set
+of dependencies.</p>
+</div>
+<div class="paragraph">
+<p>To resolve this issue, make sure to only use a single source for all your embassy crates!
+To do this, you should patch your dependencies to use git sources using <code>[patch.crates.io]</code>
+and maybe <code>[patch.'https://github.com/embassy-rs/embassy.git']</code>.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[patch.crates-io]
+embassy-time-queue-driver = { git = "https://github.com/embassy-rs/embassy.git", rev = "e5fdd35" }
+embassy-time-driver = { git = "https://github.com/embassy-rs/embassy.git", rev = "e5fdd35" }
+# embassy-time = { git = "https://github.com/embassy-rs/embassy.git", rev = "e5fdd35" }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the git revision should match any other embassy patches or git dependencies that you are using!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_can_i_optimize_the_speed_of_my_embassy_stm32_program"><a class="anchor" href="#_how_can_i_optimize_the_speed_of_my_embassy_stm32_program"></a>How can I optimize the speed of my embassy-stm32 program?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure RCC is set up to go as fast as possible</p>
+</li>
+<li>
+<p>Make sure <a href="https://docs.rs/cortex-m/latest/cortex_m/peripheral/struct.SCB.html">flash cache</a> is enabled</p>
+</li>
+<li>
+<p>build with <code>--release</code></p>
+</li>
+<li>
+<p>Set the following keys for the release profile in your <code>Cargo.toml</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>opt-level = "s"</code></p>
+</li>
+<li>
+<p><code>lto = "fat"</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set the following keys in the <code>[unstable]</code> section of your <code>.cargo/config.toml</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>build-std = ["core"]</code></p>
+</li>
+<li>
+<p><code>build-std-features = ["panic_immediate_abort"]</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enable feature <code>embassy-time/generic-queue</code>, disable feature <code>embassy-executor/integrated-timers</code></p>
+</li>
+<li>
+<p>When using <code>InterruptExecutor</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>disable <code>executor-thread</code></p>
+</li>
+<li>
+<p>make <code>main`</code> spawn everything, then enable <a href="https://docs.rs/cortex-m/latest/cortex_m/peripheral/struct.SCB.html#method.set_sleeponexit">SCB.SLEEPONEXIT</a> and <code>loop { cortex_m::asm::wfi() }</code></p>
+</li>
+<li>
+<p><strong>Note:</strong>  If you need 2 priority levels, using 2 interrupt executors is better than 1 thread executor + 1 interrupt executor.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_do_i_set_up_the_task_arenas_on_stable"><a class="anchor" href="#_how_do_i_set_up_the_task_arenas_on_stable"></a>How do I set up the task arenas on stable?</h3>
+<div class="paragraph">
+<p>When you aren&#8217;t using the <code>nightly</code> feature of <code>embassy-executor</code>, the executor uses a bump allocator, which may require configuration.</p>
+</div>
+<div class="paragraph">
+<p>Something like this error will occur at <strong>compile time</strong> if the task arena is <strong>too large</strong> for the target&#8217;s RAM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-plain" data-lang="plain">rust-lld: error: section '.bss' will not fit in region 'RAM': overflowed by _ bytes
+rust-lld: error: section '.uninit' will not fit in region 'RAM': overflowed by _ bytes</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And this message will appear at <strong>runtime</strong> if the task arena is <strong>too small</strong> for the tasks running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-plain" data-lang="plain">ERROR panicked at 'embassy-executor: task arena is full. You must increase the arena size, see the documentation for details: https://docs.embassy.dev/embassy-executor/'</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If all tasks are spawned at startup, this panic will occur immediately.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Check out <a href="https://docs.embassy.dev/embassy-executor/git/cortex-m/index.html#task-arena">Task Arena Documentation</a> for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_can_i_use_manual_isrs_alongside_embassy"><a class="anchor" href="#_can_i_use_manual_isrs_alongside_embassy"></a>Can I use manual ISRs alongside Embassy?</h3>
+<div class="paragraph">
+<p>Yes! This can be useful if you need to respond to an event as fast as possible, and the latency caused by the usual “ISR, wake, return from ISR, context switch to woken task” flow is too much for your application. Simply define a <code>#[interrupt] fn INTERRUPT_NAME() {}</code> handler as you would <a href="https://docs.rust-embedded.org/book/start/interrupts.html">in any other embedded rust project</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_can_i_measure_resource_usage_cpu_ram_etc"><a class="anchor" href="#_how_can_i_measure_resource_usage_cpu_ram_etc"></a>How can I measure resource usage (CPU, RAM, etc.)?</h3>
+<div class="sect3">
+<h4 id="_for_cpu_usage"><a class="anchor" href="#_for_cpu_usage"></a>For CPU Usage:</h4>
+<div class="paragraph">
+<p>There are a couple techniques that have been documented, generally you want to measure how long you are spending in the idle or low priority loop.</p>
+</div>
+<div class="paragraph">
+<p>We need to document specifically how to do this in embassy, but <a href="https://blog.japaric.io/cpu-monitor/">this older post</a> describes the general process.</p>
+</div>
+<div class="paragraph">
+<p>If you end up doing this, please update this section with more specific examples!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_for_static_memory_usage"><a class="anchor" href="#_for_static_memory_usage"></a>For Static Memory Usage</h4>
+<div class="paragraph">
+<p>Tools like <code>cargo size</code> and <code>cargo nm</code> can tell you the size of any globals or other static usage. Specifically you will want to see the size of the <code>.data</code> and <code>.bss</code> sections, which together make up the total global/static memory usage.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_for_max_stack_usage"><a class="anchor" href="#_for_max_stack_usage"></a>For Max Stack Usage</h4>
+<div class="paragraph">
+<p>Check out <a href="https://github.com/Dirbaio/cargo-call-stack/"><code>cargo-call-stack</code></a> for statically calculating worst-case stack usage. There are some caveats and inaccuracies possible with this, but this is a good way to get the general idea. See <a href="https://github.com/dirbaio/cargo-call-stack#known-limitations">the README</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_memory_definition_for_my_stm_chip_seems_wrong_how_do_i_define_a_memory_x_file"><a class="anchor" href="#_the_memory_definition_for_my_stm_chip_seems_wrong_how_do_i_define_a_memory_x_file"></a>The memory definition for my STM chip seems wrong, how do I define a <code>memory.x</code> file?</h3>
+<div class="paragraph">
+<p>It could happen that your project compiles, flashes but fails to run. The following situation can be true for your setup:</p>
+</div>
+<div class="paragraph">
+<p>The <code>memory.x</code> is generated automatically when enabling the <code>memory-x</code> feature on the <code>embassy-stm32</code> crate in the <code>Cargo.toml</code> file.
+This, in turn, uses <code>stm32-metapac</code> to generate the <code>memory.x</code> file for you. Unfortunately, more often than not this memory definition is not correct.</p>
+</div>
+<div class="paragraph">
+<p>You can override this by adding your own <code>memory.x</code> file. Such a file could look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>MEMORY
+{
+  FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 1024K
+  RAM (xrw)  : ORIGIN = 0x20000000, LENGTH = 320K
+}
+
+_stack_start = ORIGIN(RAM) + LENGTH(RAM);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please refer to the STM32 documentation for the specific values suitable for your board and setup. The STM32 Cube examples often contain a linker script <code>.ld</code> file.
+Look for the <code>MEMORY</code> section and try to determine the FLASH and RAM sizes and section start.</p>
+</div>
+<div class="paragraph">
+<p>If you find a case where the memory.x is wrong, please report it on [this Github issue](<a href="https://github.com/embassy-rs/stm32-data/issues/301" class="bare">https://github.com/embassy-rs/stm32-data/issues/301</a>) so other users are not caught by surprise.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_usb_examples_are_not_working_on_my_board_is_there_anything_else_i_need_to_configure"><a class="anchor" href="#_the_usb_examples_are_not_working_on_my_board_is_there_anything_else_i_need_to_configure"></a>The USB examples are not working on my board, is there anything else I need to configure?</h3>
+<div class="paragraph">
+<p>If you are trying out the USB examples and your device doesn not connect, the most common issues are listed below.</p>
+</div>
+<div class="sect3">
+<h4 id="_incorrect_rcc_config"><a class="anchor" href="#_incorrect_rcc_config"></a>Incorrect RCC config</h4>
+<div class="paragraph">
+<p>Check your board and crystal/oscillator, in particular make sure that <code>HSE</code> is set to the correct value, e.g. <code>8_000_000</code> Hertz if your board does indeed run on a 8 MHz oscillator.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vbus_detection_on_stm32_platform"><a class="anchor" href="#_vbus_detection_on_stm32_platform"></a>VBUS detection on STM32 platform</h4>
+<div class="paragraph">
+<p>The USB specification requires that all USB devices monitor the bus for detection of plugging/unplugging actions. The devices must pull-up the D+ or D- lane as soon as the host supplies VBUS.</p>
+</div>
+<div class="paragraph">
+<p>See the docs, for example at <a href="https://docs.embassy.dev/embassy-stm32/git/stm32f401vc/usb/struct.Config.html"><code>usb/struct.Config.html</code></a> for information on how to enable/disable <code>vbus_detection</code>.</p>
+</div>
+<div class="paragraph">
+<p>When the device is powered only from the USB bus that simultaneously serves as the data connection, this is optional. (If there&#8217;s no power in VBUS the device would be off anyway, so it&#8217;s safe to always assume there&#8217;s power in VBUS, i.e. the USB cable is always plugged in). If your device doesn&#8217;t have the required connections in place to allow VBUS sensing (see below), then this option needs to be set to <code>false</code> to work.</p>
+</div>
+<div class="paragraph">
+<p>When the device is powered from another power source and therefore can stay powered through USB cable plug/unplug events, then this must be implemented and <code>vbus_detection</code> MUST be set to <code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p>If your board is powered from the USB and you are unsure whether it supports <code>vbus_detection</code>, consult the schematics of your board to see if VBUS is connected to PA9 for USB Full Speed or PB13 for USB High Speed, vice versa, possibly with a voltage divider. When designing your own hardware, see ST application note AN4879 (in particular section 2.6) and the reference manual of your specific chip for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_known_issues_details_andor_mitigations"><a class="anchor" href="#_known_issues_details_andor_mitigations"></a>Known issues (details and/or mitigations)</h3>
+<div class="paragraph">
+<p>These are issues that are commonly reported. Help wanted fixing them, or improving the UX when possible!</p>
+</div>
+<div class="sect3">
+<h4 id="_stm32h5_and_stm32h7_power_issues"><a class="anchor" href="#_stm32h5_and_stm32h7_power_issues"></a>STM32H5 and STM32H7 power issues</h4>
+<div class="paragraph">
+<p>STM32 chips with built-in power management (SMPS and LDO) settings often cause user problems when the configuration does not match how the board was designed.</p>
+</div>
+<div class="paragraph">
+<p>Settings from the examples, or even from other working boards, may not work on YOUR board, because they are wired differently.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, some PWR settings require a full device reboot (and enough time to discharge any power capacitors!), making this hard to troubleshoot. Also, some
+"wrong" power settings will ALMOST work, meaning it will sometimes work on some boots, or for a while, but crash unexpectedly.</p>
+</div>
+<div class="paragraph">
+<p>There is not a fix for this yet, as it is board/hardware dependant. See <a href="https://github.com/embassy-rs/embassy/issues/2806">this tracking issue</a> for more details</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_stm32_bdma_only_work_out_of_some_ram_regions"><a class="anchor" href="#_stm32_bdma_only_work_out_of_some_ram_regions"></a>STM32 BDMA only work out of some RAM regions</h4>
+<div class="paragraph">
+<p>The STM32 BDMA controller included in some chips (TODO: list which ones) has a limitation in that it only works out of certain regions of RAM (TODO: list which ones), otherwise the transfer
+will fail.</p>
+</div>
+<div class="paragraph">
+<p>If you see errors that look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-plain" data-lang="plain">DMA: error on BDMA@1234ABCD channel 4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You need to set up your linker script to define a special region for this area, and copy data to that region before using with BDMA.</p>
+</div>
+<div class="paragraph">
+<p>General steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Find out which memory region BDMA has access to. You can get this information from the bus matrix and the memory mapping table in the STM32 datasheet.</p>
+</li>
+<li>
+<p>Add the memory region to <code>memory.x</code>, you can modify the generated one from <a href="https://github.com/embassy-rs/stm32-data-generated/tree/main/data/chips" class="bare">https://github.com/embassy-rs/stm32-data-generated/tree/main/data/chips</a>.</p>
+</li>
+<li>
+<p>You might need to modify <code>build.rs</code> to make cargo pick up the modified <code>memory.x</code>.</p>
+</li>
+<li>
+<p>In your code, access the defined memory region using <code>#[link_section = ".xxx"]</code></p>
+</li>
+<li>
+<p>Copy data to that region before using BDMA.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>See <a href="/examples/stm32h7/src/bin/spi_bdma.rs">this example</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_do_i_switch_to_the_main_branch"><a class="anchor" href="#_how_do_i_switch_to_the_main_branch"></a>How do I switch to the <code>main</code> branch?</h3>
+<div class="paragraph">
+<p>Sometimes to test new changes or fixes, you&#8217;ll want to switch your project to using a version from GitHub.</p>
+</div>
+<div class="paragraph">
+<p>You can add a section to your <code>Cargo.toml</code> file like this, you&#8217;ll need to patch ALL embassy crates to the same revision:</p>
+</div>
+<div class="paragraph">
+<p>Using <code>patch</code> will replace all direct AND indirect dependencies.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://embassy.dev/book/dev/new_project.html#_cargo_toml">new project docs</a> for more details on this approach.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-toml" data-lang="toml">[patch.crates-io]
+# make sure to get the latest git rev from github, you can see the latest one here:
+# https://github.com/embassy-rs/embassy/commits/main/
+embassy-embedded-hal = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-executor     = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-rp           = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-sync         = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-time         = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-usb          = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }
+embassy-usb-driver   = { git = "https://github.com/embassy-rs/embassy",     rev = "4cade64ebd34bf93458f17cfe85c5f710d0ff13c" }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_do_i_add_support_for_a_new_microcontroller_to_embassy"><a class="anchor" href="#_how_do_i_add_support_for_a_new_microcontroller_to_embassy"></a>How do I add support for a new microcontroller to embassy?</h3>
+<div class="paragraph">
+<p>This is particularly for cortex-m, and potentially risc-v, where there is already support for basics like interrupt handling, or even already embassy-executor support for your architecture.</p>
+</div>
+<div class="paragraph">
+<p>This is a <strong>much harder path</strong> than just using Embassy on an already supported chip. If you are a beginner, consider using embassy on an existing, well supported chip for a while, before you decide to write drivers from scratch. It&#8217;s also worth reading the existing source of supported Embassy HALs, to get a feel for how drivers are implemented for various chips. You should already be comfortable reading and writing unsafe code, and understanding the responsibilities of writing safe abstractions for users of your HAL.</p>
+</div>
+<div class="paragraph">
+<p>This is not the only possible approach, but if you are looking for where to start, this is a reasonable way to tackle the task:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, drop by the Matrix room or search around to see if someone has already started writing drivers, either in Embassy or otherwise in Rust. You might not have to start from scratch!</p>
+</li>
+<li>
+<p>Make sure the target is supported in probe-rs, it likely is, and if not, there is likely a cmsis-pack you can use to add support so that flashing and debugging is possible. You will definitely appreciate being able to debug with SWD or JTAG when writing drivers!</p>
+</li>
+<li>
+<p>See if there is an SVD (or SVDs, if it&#8217;s a family) available, if it is, run it through chiptool to create a PAC for low level register access. If not, there are other ways (like scraping the PDF datasheets or existing C header files), but these are more work than starting from the SVD file to define peripheral memory locations necessary for writing drivers.</p>
+</li>
+<li>
+<p>Either make a fork of embassy repo, and add your target there, or make a repo that just contains the PAC and an empty HAL. It doesn&#8217;t necessarily have to live in the embassy repo at first.</p>
+</li>
+<li>
+<p>Get a hello world binary working on your chip, either with minimal HAL or just PAC access, use delays and blink a light or send some raw data on some interface, make sure it works and you can flash, debug with defmt + RTT, write a proper linker script, etc.</p>
+</li>
+<li>
+<p>Get basic timer operations and timer interrupts working, upgrade your blinking application to use hardware timers and interrupts, and ensure they are accurate (with a logic analyzer or oscilloscope, if possible).</p>
+</li>
+<li>
+<p>Implement the embassy-time driver API with your timer and timer interrupt code, so that you can use embassy-time operations in your drivers and applications.</p>
+</li>
+<li>
+<p>Then start implementing whatever peripherals you need, like GPIOs, UART, SPI, I2C, etc. This is the largest part of the work, and will likely continue for a while! Don&#8217;t feel like you need 100% coverage of all peripherals at first, this is likely to be an ongoing process over time.</p>
+</li>
+<li>
+<p>Start implementing the embedded-hal, embedded-io, and embedded-hal-async traits on top of your HAL drivers, once you start having more features completed. This will allow users to use standard external device drivers (e.g. sensors, actuators, displays, etc.) with your HAL.</p>
+</li>
+<li>
+<p>Discuss upstreaming the PAC/HAL for embassy support, or make sure your drivers are added to the awesome-embedded-rust list so that people can find it.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-05-18 10:19:11 +0200
+</div>
+</div>
+</body>
+</html>
